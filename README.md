@@ -2,6 +2,7 @@
 My configuration files for:
 * Kitty
 * Neovim
+  * Note that I use Lazyvim
 * zsh
 
 and other configuration files I decide to put in here.
