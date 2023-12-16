@@ -7,8 +7,7 @@ fi
 
 function battery ()
 {
-  echo "Battery: "
-  echo "$(cat /sys/class/power_supply/BAT0/capacity)%"
+  echo "Battery: $(cat /sys/class/power_supply/BAT0/capacity)%"
 }
 
 bindkey "\t" autosuggest-accept
