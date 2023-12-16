@@ -3,7 +3,7 @@
   "python": "python3 -u",
   "typescript": "deno run",
   "rust": "cd $dir && rustc $fileName && $dir/$fileNameWithoutExt",
-  "markdown": "glow"
-  "c": "gcc -o $fileNameWithoutExt"
+  "markdown": "glow",
+  "c": "gcc -o $fileNameWithoutExt",
   "cpp": "gcc -o $fileNameWithoutExt"
 }
