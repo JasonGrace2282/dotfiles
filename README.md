@@ -1,2 +1,13 @@
 # Configs
-This is a git backup of all my files in `~/.config` (except for some folders I never modified)
+This is a git backup of most of my files in `~/.config`. Among them you can find:
+* Awesome WM config
+* i3 and i3status
+* Polybar
+* (admittedly unmodified) neofetch/fastfetch
+* `.zshrc`
+* kitty
+* picom
+* rofi
+* My custom simple-settings-gui
+* Thunar config
+* Some gtk configs
