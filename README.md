@@ -8,6 +8,6 @@ This is a git backup of most of my files in `~/.config`. Among them you can find
 * kitty
 * picom
 * rofi
-* My custom simple-settings-gui
-* Thunar config
+* My custom simple-settings-gui config
+* PCmanFM config
 * Some gtk configs
