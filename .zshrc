@@ -73,7 +73,7 @@ alias cat='bat -pp'
 
 # config aliases  
 alias rconf='exec zsh'
-alias conf='nvim ~/.zshrc'
+alias conf='nvim ~/.config/.zshrc'
 alias nconf='\cd ~/.config/nvim; nvim init.lua'
 alias aconf='\cd ~/.config/awesome; nvim rc.lua'
 alias iconf='\cd ~/.config/i3; nvim config'
@@ -91,6 +91,8 @@ alias l='deactivate'
 alias :q='exit'
 alias html='make html'
 alias copy='xclip -sel clip'
+alias pkglist='bat /etc/pkglist.txt' # from hook
+alias pkgcount='wc -l /etc/pkglist.txt'
 
 # git stuff
 alias ga='git add'
