@@ -3,14 +3,21 @@
 -- Add any additional keymaps here
 --
 
-vim.keymap.set('n', '<Leader>w', ":w<CR>:q<CR>")
-vim.keymap.set('n', '<Leader>t', ':term<CR>')
+vim.keymap.set('n', '<C-CR>', ':terminal<CR>')
 vim.keymap.del("n", "]b", {})
 vim.keymap.del("n", "[b", {})
 
-vim.keymap.set("n", "<Leader>f", ":bn<CR>")
-vim.keymap.set("n", "<Leader>g", ":bp<CR>")
-vim.keymap.set("n", "<Leader>bd", ":bd<CR>")
+-- disable arrow keymaps
+local keys = {
+  "<UP>",
+  "<Left>",
+  "<Right>",
+  "<Down>"
+}
+for i = 1, 4, 1 do
+  vim.keymap.set("n", keys[i], "")
+end
+
 
 vim.keymap.set("n", "<Leader>rf", ":RunFile<CR>")
 vim.keymap.set("n", "<Leader>vc", ":VimtexCompile<CR>")

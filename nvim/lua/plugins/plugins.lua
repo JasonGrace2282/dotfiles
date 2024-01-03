@@ -1,6 +1,6 @@
 return {
   {
-    "neovim/nvim-lspconfig"
+    "neovim/nvim-lspconfig",
   },
   {
     "nvim-telescope/telescope.nvim",
@@ -95,22 +95,24 @@ return {
     },
   },
   {
-    "nmac427/guess-indent.nvim"
+    "nmac427/guess-indent.nvim",
   },
   {
-    "lervag/vimtex"
+    "lervag/vimtex",
   },
   {
     "CRAG666/code_runner.nvim",
     opts = {
-      filetype_path = "/home/jasongrace/.config/nvim/lua/plugins/code_runner.json"
-    }
+      filetype_path = "/home/jasongrace/.config/nvim/lua/plugins/code_runner.json",
+    },
   },
   {
-    'numToStr/Comment.nvim',
-    opts = {
-
-    },
+    "numToStr/Comment.nvim",
+    opts = {},
     lazy = false,
+  },
+  {
+    "kwkarlwang/bufresize.nvim",
+    opts = {}
   }
 }
