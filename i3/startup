@@ -21,4 +21,4 @@ exec --no-startup-id picom -b --config ~/.config/picom/picom.conf
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
 # set background
-exec feh --bg-scale ~/important/pc_background.jpg
+exec feh --bg-scale $I3_CONFIG/../background/archbg.png

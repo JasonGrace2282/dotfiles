@@ -11,6 +11,7 @@
 
 set $mod Mod4
 set $I3_CONFIG ~/.config/i3
+set $SCRIPTS $I3_CONFIG/scripts
 
 include $I3_CONFIG/rules
 
@@ -84,15 +85,14 @@ include $I3_CONFIG/commands
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-# bar {
-#   i3bar_command i3bar --transparency
-#   status_command i3status -c ~/.config/i3status/config
-#   # position top
-#   colors {
-#     background #00000000
-#     statusline #FFFFFF
-#   }
-# }
-#
+bar {
+  i3bar_command i3bar --transparency
+  # status_command i3status -c ~/.config/i3status/config
+  position top
+  colors {
+    background #00000000
+    statusline #FFFFFF
+  }
+}
 
 exec_always --no-startup-id sh $I3_CONFIG/scripts/launch.sh
