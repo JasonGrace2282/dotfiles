@@ -23,7 +23,7 @@ local my_table                                  = awful.util.table or gears.tabl
 
 local theme                                     = {}
 theme.dir                                       = os.getenv("HOME") .. "/.config/awesome/themes/dremora"
-theme.wallpaper                                 = os.getenv("HOME") .. "/important/pc_background.jpg"
+theme.wallpaper                                 = theme.dir .. "/wallpaper.jpg" -- or archwallpaper.png
 theme.font                                      = "Terminus 10.5"
 theme.taglist_font                              = "Icons 10"
 theme.fg_normal                                 = "#747474"
