@@ -1,9 +1,2 @@
-#!/bin/sh
-
-img=/tmp/i3lock.png
-
-maim $img
-convert -scale 10% -blur 0x2.5 -resize 1000% $img $img
-
-i3lock -i $img
+i3lock -i ~/.config/background/i3lock.png --ring-color=1c60e3 --keyhl-color=9feef5 --noinput-text="empty" --verif-text="verified" --time-str="%I:%M:%S"
 

@@ -15,11 +15,12 @@ set $SCRIPTS $I3_CONFIG/scripts
 
 include $I3_CONFIG/rules
 
-exec_always --no-startup-id xss-lock -- $I3_CONFIG/scripts/lock.sh
+exec_always --no-startup-id killall xss-lock
+exec_always --no-startup-id "xss-lock --transfer-sleep-lock -- $(cat $SCRIPTS/i3lock.sh)"
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Inconsolata 10
+font pango:fredoka 12
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).

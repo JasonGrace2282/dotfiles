@@ -1,1 +1,1 @@
-bindsym $mod+Shift+s exec "maim -s | xclip -selection clipboard"
+bindsym $mod+Shift+s exec "maim -s | xclip -selection clipboard -t image/png -i"

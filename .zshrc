@@ -51,6 +51,7 @@ export AUTOENV_FILE_LEAVE=".autoenv.zsh"
 export BAT_THEME="TwoDark"
 export SDDMTHEME="/usr/share/sddm/themes/chili"
 export CHROOT="/home/jasongrace2282/chroot"
+export MOZ_DBUS_REMOTE=1 firefox
 
 bindkey "\t" autosuggest-accept
 bindkey "^[[3~" delete-char # otherwise delete creates tilda
