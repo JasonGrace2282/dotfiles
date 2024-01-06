@@ -1,0 +1,21 @@
+#!/bin/bash
+bat_files="/sys/class/power_supply/BAT0"
+LOW_WARNING=30
+CRITICAL=15
+
+while [ true ]
+do
+  bat_status=$(cat "${bat_files}/status")
+  capacity=$(cat "${bat_files}/capacity")
+  if [[ "${bat_status}"=="Discharging" && ${capacity} -le $LOW_WARNING ]]; then
+      # timeout after 10 seconds
+      dunstify "Battery alert - ${capacity}%" --urgency=critical --timeout=10000
+  
+  elif [[ "${bat_status}"=="Discharging" && ${capacity} -le $CRITICAL ]]; then 
+    # timeout after 10 seconds
+    dunstify "WARNING: BATTERY AT ${capacity}%" --urgency=critical --timeout=10000
+  fi
+
+
+  sleep 10m
+done
