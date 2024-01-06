@@ -14,7 +14,7 @@ local keys = {
   "<Right>",
   "<Down>"
 }
-for i = 1, 4, 1 do
+for i = 1, #keys, 1 do
   vim.keymap.set("n", keys[i], "")
 end
 

@@ -17,7 +17,7 @@ local augroup = vim.api.nvim_create_augroup
 -- i3 syntax highlighting
 autocmd({'BufNewFile','BufRead'}, {
   group = augroup('i3config_ft_detection', { clear = true } ),
-  pattern = {'*/.config/i3*'},
+  pattern = {'*/.config/i3*^.'},
   command = 'set filetype=i3config',
 })
 
