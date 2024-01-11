@@ -1,1 +1,2 @@
-bindsym $mod+Shift+s exec "maim -s | xclip -selection clipboard -t image/png -i"
+bindsym $mod+Shift+s exec --no-startup-id bash $SCRIPTS/screenshot.sh
+bindsym $mod+Shift+v exec copyq menu

@@ -103,7 +103,26 @@ return {
   {
     "CRAG666/code_runner.nvim",
     opts = {
-      filetype_path = "/home/jasongrace/.config/nvim/lua/plugins/code_runner.json",
+      -- filetype_path = "/home/jasongrace/.config/nvim/lua/plugins/code_runner.json",
+      filetype = {
+        java = {
+          "cd $dir &&",
+          "javac $fileName &&",
+          "java $fileNameWithoutExt"
+        },
+        python = "python",
+        typescript = "deno run",
+        rust = {
+          "cd $dir &&",
+          "rustc $fileName &&",
+          "$dir/$fileNameWithoutExt"
+        },
+        haskell = {
+          "ghc --make -o $fileNameWithoutExt $fileName;",
+          "$dir/$fileNameWithoutExt"
+        },
+        markdown = "glow"
+      },
     },
   },
   {
@@ -114,5 +133,8 @@ return {
   {
     "kwkarlwang/bufresize.nvim",
     opts = {}
+  },
+  {
+    "Stoozy/vimcord"
   }
 }

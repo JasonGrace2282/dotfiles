@@ -30,10 +30,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-function battery ()
+function battery () # in case have to check from terminal
 {
   echo "Battery: "
   echo "$(cat /sys/class/power_supply/BAT0/capacity)%"
+  echo "$(cat /sys/class/power_supply/BAT0/status)"
 }
 
 function brightness ()
@@ -43,13 +44,14 @@ function brightness ()
       echo "BRIGHTNESS is a float (0.0-1.0)"
   else
       xrandr --listmonitors | grep "^ " | cut -f 6 -d' ' | \
-      xargs --replace=MONITOR xrandr --output MONITOR --brightness $1
+      xargs --replace=0 xrandr --output 0 --brightness $1
   fi
 }
 
+export PATH="$HOME/.ghcup/bin:$PATH"
 export AUTOENV_FILE_LEAVE=".autoenv.zsh"
 export BAT_THEME="TwoDark"
-export SDDMTHEME="/usr/share/sddm/themes/chili"
+# export SDDMTHEME="/usr/share/sddm/themes/chili"
 export CHROOT="/home/jasongrace2282/chroot"
 export MOZ_DBUS_REMOTE=1 firefox
 
