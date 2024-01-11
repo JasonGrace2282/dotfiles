@@ -2,8 +2,6 @@
   "settings": {
     "thunar": "lxappearance",
     "sddm": "sddm-conf",
-    "asusctl": "rog-control-center",
-    "wifi": "nm-connection-editor"
   },
   "appearance": "dark",
   "font": null,
