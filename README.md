@@ -24,6 +24,8 @@ You will need to install the following packages:
 * kitty
 * rofi
 * fastfetch (faster neofetch)
+* python and customtkinter python library
+* Some small applications like osmo
 This will depend on os, but for archlinux most of these packages are available with `pacman`.
 
 You can then execute the following commands:
