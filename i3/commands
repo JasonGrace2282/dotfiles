@@ -1,2 +1,3 @@
 bindsym $mod+Shift+s exec --no-startup-id bash $SCRIPTS/screenshot.sh
 bindsym $mod+Shift+v exec copyq menu
+bindsym $mod+c       exec python $SCRIPTS/screenshot.py

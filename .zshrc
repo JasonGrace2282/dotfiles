@@ -51,7 +51,6 @@ function brightness ()
 export PATH="$HOME/.ghcup/bin:$PATH"
 export AUTOENV_FILE_LEAVE=".autoenv.zsh"
 export BAT_THEME="TwoDark"
-# export SDDMTHEME="/usr/share/sddm/themes/chili"
 export CHROOT="/home/jasongrace2282/chroot"
 export MOZ_DBUS_REMOTE=1 firefox
 
@@ -96,6 +95,7 @@ alias html='make html'
 alias copy='xclip -sel clip'
 alias pkglist='bat /etc/pkglist.txt' # from hook
 alias pkgcount='wc -l /etc/pkglist.txt'
+alias printer='system-config-printer &> /tmp/printer.log'
 
 # git stuff
 alias ga='git add'

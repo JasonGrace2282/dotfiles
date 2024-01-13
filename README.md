@@ -32,3 +32,8 @@ mv ~/.config ~/.config.backup
 git clone https://github.com/JasonGrace2282/configs.git ~/.config
 ```
 You will then need to manually change all the `/home/jasongrace2282`'s to the absolute path of the user you are using it for.
+
+If you are on archlinux, there is a handy script to install most dependencies for you, just run
+```bash
+bash ~/.config/setup.sh
+```

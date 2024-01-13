@@ -18,16 +18,12 @@
     "font",
     "cursor",
     "terminal",
-    "terminalfont",
     "cpu",
     "gpu",
     "memory",
     "swap",
     "disk",
-    "localip",
     "battery",
-    "poweradapter",
-    "locale",
     "break",
     "colors"
   ]
