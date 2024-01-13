@@ -19,6 +19,8 @@ do
     # timeout after 10 seconds
     dunstify "WARNING: BATTERY AT ${capacity}%" "status: ${bat_status}" --urgency=critical --timeout=10000
     sleep_time=5
+  else
+    sleep_time=10
   fi
 
   sleep ${sleep_time}m
