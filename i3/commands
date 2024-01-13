@@ -1,3 +1,34 @@
 bindsym $mod+Shift+s exec --no-startup-id bash $SCRIPTS/screenshot.sh
 bindsym $mod+Shift+v exec copyq menu
 bindsym $mod+c       exec python $SCRIPTS/screenshot.py
+# start a terminal
+bindsym $mod+Return exec kitty
+
+# launch firefox
+bindsym $mod+q exec firefox
+
+# launch discord
+bindsym $mod+Shift+d exec discord
+
+# kill focused window
+bindsym $mod+Shift+c kill
+
+# start dmenu (a program launcher)
+# bindsym $mod+d exec --no-startup-id dmenu_run
+# A more modern dmenu replacement is rofi:
+bindsym $mod+d exec bash $I3_CONFIG/scripts/roficonf.sh &> /tmp/i3log.log
+# There also is i3-dmenu-desktop which only displays applications shipping a
+# .desktop file. It is a wrapper around dmenu, so you need that installed.
+# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
+
+bindsym $mod+Ctrl+Shift+l exec --no-startup-id bash $I3_CONFIG/scripts/i3lock.sh &> /tmp/i3log.log
+
+# reload the configuration file
+# bindsym $mod+Shift+q reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+# dunst
+bindsym $mod+p exec --no-startup-id dunstctl close-all
+
+

@@ -1,14 +1,7 @@
-# i3 config file (v4)
-#
-# Please see https://i3wm.org/docs/userguide.html for a complete reference!
-
+set $HOME /home/jasongrace2282
 set $mod Mod4
-set $I3_CONFIG /home/jasongrace2282/.config/i3
-set $SCRIPTS /home/jasongrace2282/.config/i3/scripts
-# kill old processes
-# exec_always --no-startup-id killall sh
-# exec_always --no-startup-id killall bash
-# exec_always --no-startup-id killall sleep
+set $I3_CONFIG $HOME/.config/i3
+set $SCRIPTS $HOME/.config/i3/scripts
 
 include $I3_CONFIG/rules
 
@@ -48,41 +41,11 @@ floating_modifier $mod
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
-# start a terminal
-bindsym $mod+Return exec kitty
-
-# launch firefox
-bindsym $mod+q exec firefox
-
-# launch discord
-bindsym $mod+Shift+d exec discord
-
-# kill focused window
-bindsym $mod+Shift+c kill
-
-# start dmenu (a program launcher)
-# bindsym $mod+d exec --no-startup-id dmenu_run
-# A more modern dmenu replacement is rofi:
-bindsym $mod+d exec bash $I3_CONFIG/scripts/roficonf.sh &> /tmp/i3log.log
-# There also is i3-dmenu-desktop which only displays applications shipping a
-# .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
-
-bindsym $mod+Ctrl+Shift+l exec --no-startup-id bash $I3_CONFIG/scripts/i3lock.sh &> /tmp/i3log.log
-
 include $I3_CONFIG/movement
 
 focus_follows_mouse no
 
 include $I3_CONFIG/tags
-
-# reload the configuration file
-# bindsym $mod+Shift+q reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-
-# dunst
-bindsym $mod+p exec --no-startup-id dunstctl close-all
 
 include $I3_CONFIG/modes
 
