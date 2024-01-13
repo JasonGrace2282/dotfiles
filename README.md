@@ -1,4 +1,4 @@
-# Configs
+# JasonGrace2282's Dotfiles
 This is a git backup of most of my files in `~/.config`. Among them you can find:
 * Awesome WM config
 * i3 and i3status
@@ -31,7 +31,7 @@ This will depend on os, but for archlinux most of these packages are available w
 You can then execute the following commands:
 ```bash
 mv ~/.config ~/.config.backup
-git clone https://github.com/JasonGrace2282/configs.git ~/.config
+git clone https://github.com/JasonGrace2282/dotfiles.git ~/.config
 ```
 You will then need to manually change all the `/home/jasongrace2282`'s to the absolute path of the user you are using it for.
 
