@@ -14,16 +14,13 @@
     "wm",
     "wmtheme",
     "theme",
-    "icons",
     "font",
-    "cursor",
     "terminal",
     "cpu",
     "gpu",
     "memory",
     "swap",
     "disk",
-    "battery",
     "break",
     "colors"
   ]
