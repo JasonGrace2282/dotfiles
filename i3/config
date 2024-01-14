@@ -63,4 +63,4 @@ include $I3_CONFIG/commands
 #   }
 # }
 
-exec_always --no-startup-id sh $I3_CONFIG/scripts/launch.sh
+exec_always --no-startup-id sh $I3_CONFIG/scripts/launch.sh &> /tmp/i3log.log

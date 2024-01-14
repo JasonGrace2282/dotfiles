@@ -1,2 +1,2 @@
 assign [class="discord"] 2
-for_window [class="Spotify"] move to workspace $ws4
+for_window [class="Spotify"] move to workspace 3

@@ -53,6 +53,10 @@ export AUTOENV_FILE_LEAVE=".autoenv.zsh"
 export BAT_THEME="TwoDark"
 export CHROOT="/home/jasongrace2282/chroot"
 export MOZ_DBUS_REMOTE=1 firefox
+export ZSH_AUTOSUGGEST_STRATEGY=history
+
+# autoload predict-on
+# predict-on
 
 bindkey "\t" autosuggest-accept
 bindkey "^[[3~" delete-char # otherwise delete creates tilda
@@ -119,6 +123,8 @@ export KITTY_SHELL_INTEGRATION="enabled"
 
 source ~/zsh/zsh-z/zsh-z.plugin.zsh
 source ~/zsh/sudo/sudo.zsh
+source ~/zsh/zsh-completions/zsh-completions.plugin.zsh
+source ~/zsh/history-substring-search/zsh-history-substring-search.plugin.zsh
 source ~/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/zsh/zsh-autoenv/autoenv.zsh
 source ~/zsh/poetry.zsh
