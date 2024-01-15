@@ -1,4 +1,6 @@
 # JasonGrace2282's Dotfiles
+![image](https://github.com/JasonGrace2282/dotfiles/assets/110117391/9ad599f3-cd5a-45d6-aca6-690ab63eff1a)
+
 This is a git backup of most of my files in `~/.config`. Among them you can find:
 * Awesome WM config
 * i3 and i3status
