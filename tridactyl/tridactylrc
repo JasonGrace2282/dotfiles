@@ -1,0 +1,20 @@
+unbind J
+unbind K
+unbind H
+unbind L
+
+bind J back
+bind K forward
+bind H tabprev
+bind L tabnext
+
+bind <C-1> tab 1
+bind <C-2> tab 2
+bind <C-3> tab 3
+bind <C-4> tab 4
+bind <C-5> tab 5
+bind <C-6> tab 6
+bind <C-7> tab 7
+bind <C-8> tab 8
+bind <C-9> tab 9
+
