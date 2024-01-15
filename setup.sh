@@ -23,10 +23,9 @@ then
 fi
 
 read -p "Would you like to install vi-like keybinds for firefox?[y/N] " -n 1 -r
-echo    # (optional) move to a new line
+echo  
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    echo $REPLY
     pkglist="${pkglist} firefox firefox-tridactyl firefox-tridactyl-native"
 fi
 
