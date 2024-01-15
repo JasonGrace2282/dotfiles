@@ -54,6 +54,8 @@ export BAT_THEME="TwoDark"
 export CHROOT="/home/jasongrace2282/chroot"
 export MOZ_DBUS_REMOTE=1 firefox
 export ZSH_AUTOSUGGEST_STRATEGY=history
+export MOZ_ENABLE_WAYLAND=0
+# export GDK_BACKEND=x11
 
 # autoload predict-on
 # predict-on
