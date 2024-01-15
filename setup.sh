@@ -5,7 +5,7 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-pkglist="i3-wm awesome-git polybar zsh picom pcmanfm maim dunst kitty rofi fastfetch osmo nm-connection-editor acpi python customtkinter"
+pkglist="i3-wm awesome-git polybar zsh picom pcmanfm maim dunst kitty rofi fastfetch osmo nm-connection-editor acpi python customtkinter firefox firefox-tridactyl firefox-tridactyl-native"
 
 if [[ ${AUR_HELPER} != "" ]] then
     echo "Using AUR helper ${AUR_HELPER}"

@@ -18,3 +18,5 @@ bind <C-7> tab 7
 bind <C-8> tab 8
 bind <C-9> tab 9
 
+colourscheme --url https://raw.githubusercontent.com/JasonGrace2282/tridactyl-theme/main/twilight.css twilight
+
