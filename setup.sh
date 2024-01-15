@@ -13,6 +13,7 @@ case $yn in
     i3 ) pkglist="i3-wm ${pkglist}";;
     awesome ) pkglist="awesome-git ${pkglist}";;
     both ) pkglist="i3-wm awesome-git ${pkglist}";;
+    *) echo "Sorry, did not understand your response" && exit 1;;
 esac
 
 read -p "Would you like to install some extra utilities?[Y/n] " -n 1 -r
