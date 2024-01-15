@@ -1,7 +1,7 @@
 {
   "settings": {
     "thunar": "lxappearance",
-    "sddm": "sddm-conf",
+    "sddm": "sddm-conf"
   },
   "appearance": "dark",
   "font": null,
