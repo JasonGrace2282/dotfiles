@@ -5,9 +5,9 @@
 #    exit 1
 # fi
 
-WMs="i3-wm awesome-git"
 pkglist="polybar zsh picom pcmanfm maim dunst kitty rofi"
 
+# check which WMs to install
 read -p "Do you want to install i3, awesome, or both?[i3/awesome/both] " yn
 case $yn in
     i3 ) pkglist="i3-wm ${pkglist}";;
@@ -15,19 +15,19 @@ case $yn in
     both ) pkglist="i3-wm awesome-git ${pkglist}";;
 esac
 
+read -p "Would you like to install some extra utilities?[Y/n] " -n 1 -r
+echo
+if [[ ! $REPLY =~ ^[Nn]$ ]]
+then
+    pkglist="${pkglist} fastfetch osmo nm-connection-editor acpi python customtkinter nvim"
+fi
+
 read -p "Would you like to install vi-like keybinds for firefox?[y/N] " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     echo $REPLY
     pkglist="${pkglist} firefox firefox-tridactyl firefox-tridactyl-native"
-fi
-
-read -p "Would you like to install some extra dependencies?[Y/n] " -n 1 -r
-echo
-if [[ ! $REPLY =~ ^[Nn]$ ]]
-then
-    pkglist="${pkglist} fastfetch osmo nm-connection-editor acpi python customtkinter nvim"
 fi
 
 # handle AUR helpers
