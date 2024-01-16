@@ -48,13 +48,29 @@ function brightness ()
   fi
 }
 
+function usbmount ()
+{
+  if [[ "$1" == "" ]]
+  then
+      echo "Expected argument \"partition\""
+      exit 1
+  fi
+  if [[ ! "$(findmnt /mnt/usb)" == "" ]]
+  then
+      echo "Must create new directory, /mnt/usb in use."
+  else
+      sudo mount /dev/$1 /mnt/usb
+  fi
+}
+
+export KITTY_SHELL_INTEGRATION="enabled"
 export PATH="$HOME/.ghcup/bin:$PATH"
 export AUTOENV_FILE_LEAVE=".autoenv.zsh"
 export BAT_THEME="TwoDark"
 export CHROOT="/home/jasongrace2282/chroot"
 export MOZ_DBUS_REMOTE=1 firefox
 export ZSH_AUTOSUGGEST_STRATEGY=history
-export MOZ_ENABLE_WAYLAND=0
+export MOZ_ENABLE_WAYLAND=1
 # export GDK_BACKEND=x11
 
 # autoload predict-on
@@ -85,6 +101,7 @@ alias conf='nvim ~/.config/.zshrc'
 alias nconf='\cd ~/.config/nvim; nvim init.lua'
 alias aconf='\cd ~/.config/awesome; nvim rc.lua'
 alias iconf='\cd ~/.config/i3; nvim config'
+alias hconf='\cd ~/.config/hypr; nvim hyprland.conf'
 alias dns='bat -pp /etc/resolv.conf'
 alias pwd='print -P %~'
 alias settings='python ~/repos/simple_settings_gui/settings_gui.py'
@@ -121,7 +138,6 @@ alias neofetch='fastfetch'
 alias icat='kitten icat'
 alias d='kitten diff'
 
-export KITTY_SHELL_INTEGRATION="enabled"
 
 source ~/zsh/zsh-z/zsh-z.plugin.zsh
 source ~/zsh/sudo/sudo.zsh

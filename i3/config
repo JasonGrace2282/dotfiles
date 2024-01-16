@@ -1,14 +1,15 @@
-set $HOME /home/jasongrace2282
 set $mod Mod4
-set $I3_CONFIG $HOME/.config/i3
-set $SCRIPTS $HOME/.config/i3/scripts
+set $HOME /home/jasongrace2282
+set $CONFIG $HOME/.config
+set $I3_CONFIG $CONFIG/i3
+set $SCRIPTS $CONFIG/scripts
 
 include $I3_CONFIG/rules
 
 exec --no-startup-id copyq
 
 exec_always --no-startup-id killall xss-lock
-exec_always --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -i /home/jasongrace2282/.config/background/i3lock.png --ring-color=1c60e3 --keyhl-color=9feef5 --noinput-text="empty" --verif-text="verified" --time-str="%I:%M:%S" &> /tmp/i3log.log
+exec_always --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -i $CONFIG/background/i3lock.png --ring-color=1c60e3 --keyhl-color=9feef5 --noinput-text="empty" --verif-text="verified" --time-str="%I:%M:%S" &> /tmp/i3log.log
 
 exec --no-startup-id bash "$SCRIPTS/battery.sh" &> /tmp/i3log.log
 
@@ -63,4 +64,4 @@ include $I3_CONFIG/commands
 #   }
 # }
 
-exec_always --no-startup-id sh $I3_CONFIG/scripts/launch.sh &> /tmp/i3log.log
+exec_always --no-startup-id sh $SCRIPTS/launch.sh &> /tmp/i3log.log
