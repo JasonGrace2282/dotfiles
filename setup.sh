@@ -8,14 +8,15 @@
 pkglist="zsh picom pcmanfm maim dunst kitty"
 I3="i3-wm polybar rofi"
 awesome="awesome-git rofi"
-hypr="hyprland waybar rofi-lbonn-wayland"
+hypr="hyprland waybar rofi-lbonn-wayland wl-clipboard wl-clipboard-x11"
 # check which WMs to install
 read -p "Which window manager do you want to install?[i3/awesome/hypr/all] " yn
 case $yn in
-    i3 ) pkglist="i3-wm ${pkglist}";;
-    awesome ) pkglist="awesome-git ${pkglist}";;
-    all ) pkglist="i3-wm awesome-git ${pkglist}";;
-    *) echo "Sorry, did not understand your response" && exit 1;;
+    i3 ) pkglist="${I3} ${pkglist}";;
+    awesome ) pkglist="${awesome} ${pkglist}";;
+    hypr ) pkglist="${hypr} ${pkglist}";;
+    all ) pkglist="${I3} ${awesome} ${hypr} ${pkglist}";;
+    *) echo "Sorry, did not understand your response";exit 1;;
 esac
 
 read -p "Would you like to install some extra utilities?[Y/n] " -n 1 -r
