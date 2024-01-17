@@ -5,14 +5,16 @@
 #    exit 1
 # fi
 
-pkglist="polybar zsh picom pcmanfm maim dunst kitty rofi"
-
+pkglist="zsh picom pcmanfm maim dunst kitty"
+I3="i3-wm polybar rofi"
+awesome="awesome-git rofi"
+hypr="hyprland waybar rofi-lbonn-wayland"
 # check which WMs to install
-read -p "Do you want to install i3, awesome, or both?[i3/awesome/both] " yn
+read -p "Which window manager do you want to install?[i3/awesome/hypr/all] " yn
 case $yn in
     i3 ) pkglist="i3-wm ${pkglist}";;
     awesome ) pkglist="awesome-git ${pkglist}";;
-    both ) pkglist="i3-wm awesome-git ${pkglist}";;
+    all ) pkglist="i3-wm awesome-git ${pkglist}";;
     *) echo "Sorry, did not understand your response" && exit 1;;
 esac
 

@@ -3,6 +3,7 @@
 
 This is a git backup of most of my files in `~/.config`. Among them you can find:
 * Awesome WM config
+* Hyprland config
 * i3 and i3status
 * Polybar
 * fastfetch
@@ -19,7 +20,7 @@ Note: `setup.sh` has the most up-to-date dependency list. If you do not want to 
 
 You will need to install the following packages:
 * i3-wm/awesome
-* polybar
+* polybar/waybar
 * zsh
 * picom
 * pcmanfm

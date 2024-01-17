@@ -134,9 +134,9 @@ return {
     "kwkarlwang/bufresize.nvim",
     opts = {}
   },
-  {
-    "Stoozy/vimcord"
-  },
+--   {
+--     "Stoozy/vimcord"
+--   },
   {
 		"theRealCarneiro/hyprland-vim-syntax",
 		dependencies = { "nvim-treesitter/nvim-treesitter" },

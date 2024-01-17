@@ -22,19 +22,19 @@ autocmd({'BufNewFile','BufRead'}, {
 })
 
 vim.g.vimtex_syntax_conceal = {
-          accents= 0,
-          ligatures = 1,
-          cites = 1,
-          fancy = 1,
-          spacing = 0,
-          greek = 0,
-          math_bounds = 1,
-          math_delimiters = 1,
-          math_fracs = 1,
-          math_super_sub = 1,
-          math_symbols = 1,
-          sections = 0,
-          styles = 1,
+  accents= 0,
+  ligatures = 1,
+  cites = 1,
+  fancy = 1,
+  spacing = 0,
+  greek = 0,
+  math_bounds = 1,
+  math_delimiters = 1,
+  math_fracs = 1,
+  math_super_sub = 1,
+  math_symbols = 1,
+  sections = 0,
+  styles = 1,
 }
 
 -- Use :sp to split horizontally
