@@ -103,7 +103,6 @@ return {
   {
     "CRAG666/code_runner.nvim",
     opts = {
-      -- filetype_path = "/home/jasongrace/.config/nvim/lua/plugins/code_runner.json",
       filetype = {
         java = {
           "cd $dir &&",
@@ -137,9 +136,4 @@ return {
 --   {
 --     "Stoozy/vimcord"
 --   },
-  {
-		"theRealCarneiro/hyprland-vim-syntax",
-		dependencies = { "nvim-treesitter/nvim-treesitter" },
-		ft = "hypr",
-	},
 }
