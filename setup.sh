@@ -36,9 +36,9 @@ fi
 # handle AUR helpers
 if [[ ${AUR_HELPER} != "" ]] then
     echo "Using AUR helper ${AUR_HELPER}"
-elif [[  "$(command -v paru)" == "/sbin/paru" ]] then
+elif [[  "$(command -v paru)" == *"/paru" ]] then
     AUR_HELPER=paru
-elif [[ "$(command -v yay)" == "/sbin/yay" ]] then
+elif [[ "$(command -v yay)" == *"/yay" ]] then
     AUR_HELPER=yay
 fi
 
