@@ -11,6 +11,15 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+set $i3l spiral 0.6 to workspace $ws1
+set $i3l spiral 0.6 to workspace $ws2
+set $i3l spiral 0.6 to workspace $ws3
+set $i3l spiral 0.6 to workspace $ws4
+set $i3l spiral 0.6 to workspace $ws5
+set $i3l spiral 0.6 to workspace $ws6
+
+
+
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2

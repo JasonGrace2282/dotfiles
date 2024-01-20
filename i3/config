@@ -1,9 +1,10 @@
 # i3 config file (v4)
 
 set $mod Mod4
-set $CONFIG /home/jasongrace2282/.config
-set $I3_CONFIG /home/jasongrace2282/.config/i3
-set $SCRIPTS /home/jasongrace2282/.config/scripts
+set $HOME /home/jasongrace2282
+set $CONFIG $HOME/.config
+set $I3_CONFIG $HOME/.config/i3
+set $SCRIPTS $HOME/.config/scripts
 
 include $I3_CONFIG/rules
 
@@ -52,7 +53,7 @@ include $I3_CONFIG/tags
 
 include $I3_CONFIG/modes
 
-include /home/jasongrace2282/.config/i3/commands
+include $I3_CONFIG/commands
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -60,4 +61,4 @@ include /home/jasongrace2282/.config/i3/commands
 # bar {
 #     status_command i3status
 # }
-exec bash /home/jasongrace2282/.config/scripts/launch.sh
+exec bash $SCRIPTS/launch.sh

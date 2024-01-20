@@ -17,4 +17,7 @@ exec_always --no-startup-id killall dunst
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
 # set background
-exec feh --bg-scale /home/jasongrace2282/.config/background/archbg.png
+exec --no-startup-id "feh --bg-scale $CONFIG/background/archbg.png"
+
+# tiling layout
+exec --no-startup-id "python $I3_CONFIG/spiral.py"
