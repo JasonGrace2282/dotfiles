@@ -2,20 +2,30 @@ import customtkinter as ctk
 import os, sys
 
 ctk.set_appearance_mode("dark")
-r = ctk.CTk()
-r.attributes('-type', 'dialog')
-l = ctk.CTkEntry(r, placeholder_text="filename without .png")
-l.focus()
-l.pack()
-def quit(*_):
-    global l
-    tmp = l.get()
-    r.destroy()
-    if tmp:
-        os.system(f"maim -s ~/Pictures/Screenshots/{tmp}.png")
-        os.system(f"dunstify \"Took Screenshot\" \"Located at ~/Pictures/Screenshots/{tmp}.png\"")
-ctk.CTkButton(r, command=quit, text="Enter").pack(pady=5)
-r.bind("<Return>", quit)
-r.title("Screenshot to File")
-r.mainloop()
+
+class ScreenshotPopup(ctk.CTk):
+    def __init__(self):
+        super().__init__()
+        # make popup (floating) window
+        self.attributes("-type", "dialog")
+        self.bind("<Return>", self.quit)
+        self.title("Screenshot to File")
+        self.geometry("200x100")
+
+        self.entry = ctk.CTkEntry(self, placeholder_text="filename without .png")
+        self.entry.focus() # move cursor inside entry
+        self.entry.pack()
+ 
+        self.button = ctk.CTkButton(self, command=self.quit, text="Enter")
+        self.button.pack(pady=10)
+
+    def quit(self, *args) -> None:
+        fpath = self.entry.get()
+        self.destroy()
+        if fpath:
+            os.system(f"maim -s ~/Pictures/Screenshots/{fpath}.png")
+            os.system(f"dunstify \"Took Screenshot\" \"Located at ~/Pictures/Screenshots/{fpath}.png\"")
+
+if __name__ == "__main__":
+    ScreenshotPopup().mainloop()
 
