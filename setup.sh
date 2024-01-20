@@ -12,7 +12,7 @@ else
 fi
 
 pkglist="zsh pcmanfm dunst kitty"
-I3="i3-wm polybar rofi xss-lock i3lock-color feh picom-ftlabs-git maim"
+I3="i3-wm polybar rofi xss-lock i3lock-color feh picom-ftlabs-git maim python-i3ipc"
 pkglist="${I3} ${pkglist}"
 
 read -p "Would you like to install some extra utilities?[Y/n] " -n 1 -r
