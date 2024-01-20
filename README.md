@@ -17,7 +17,7 @@ This is a git backup of most of my files in `~/.config`. Among them you can find
 * Some gtk configs
 
 ## Installation
-You can then execute the following commands:
+Execute the following commands to backup your current configuration and install this repository.
 ```bash
 mv ~/.config ~/.config.backup
 git clone https://github.com/JasonGrace2282/dotfiles.git ~/.config
