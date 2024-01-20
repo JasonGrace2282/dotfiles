@@ -17,23 +17,6 @@ This is a git backup of most of my files in `~/.config`. Among them you can find
 * Some gtk configs
 
 ## Installation
-Note: `setup.sh` has the most up-to-date dependency list. If you do not want to install everything, feel free to remove some packages from it.
-
-You will need to install the following packages:
-* i3-wm/awesome
-* polybar/waybar
-* zsh
-* picom
-* pcmanfm
-* maim (screenshots)
-* dunst (notifications)
-* kitty
-* rofi
-* fastfetch and/or neofetch
-* python and customtkinter python library
-* Some small applications like osmo
-This will depend on os, but for archlinux most of these packages are available with `pacman` or in the AUR.
-
 You can then execute the following commands:
 ```bash
 mv ~/.config ~/.config.backup
@@ -45,3 +28,5 @@ If you are on archlinux, there is a handy script to install most dependencies fo
 ```bash
 bash ~/.config/setup.sh
 ```
+
+To get an (almost) fully functioning system, accept the defaults for each option.

@@ -36,8 +36,24 @@ then
     pkglist="${pkglist} firefox firefox-tridactyl firefox-tridactyl-native-bin"
 fi
 
+if [[ "$1" != "--no-upgrade" ]]
+then
+    echo "Upgrading archlinux!"
+    flag="-Syu"
+else
+    echo "Warning: will not upgrade Arch with install"
+    flag="-S"
+fi
+
 echo "Installing packages (this may take a while!)"
-${AUR_HELPER} -S ${pkglist}
+${AUR_HELPER} ${flag} ${pkglist} --needed
+
+# check exit code of installation
+if [[ "$?" != "0" ]]
+then
+    echo "Uh oh, an error occured. Please try again."
+    exit 1
+fi
 
 echo "You're almost done! Just install the Fredoka font from google: https://fonts.google.com/specimen/Fredoka"
 echo "Download the font family and then use the command: unzip <installed zip file> && mv Fredoka ~/.local/share/fonts/Fredoka"
