@@ -15,11 +15,12 @@ pkglist="zsh pcmanfm dunst kitty"
 I3="i3-wm polybar rofi xss-lock i3lock-color feh picom-ftlabs-git maim python-i3ipc"
 pkglist="${I3} ${pkglist}"
 
-read -p "Would you like to install some extra utilities?[Y/n] " -n 1 -r
+echo "Would you like to install some extra utilities?"
+read -p "Note that without these utilities, some functions may not work[Y/n] " -n 1 -r
 echo
 if [[ ! $REPLY =~ ^[Nn]$ ]]
 then
-    pkglist="${pkglist} fastfetch osmo nm-connection-editor acpi python customtkinter neovim zsh zsh-theme-powerlevel10k-git bat"
+    pkglist="${pkglist} fastfetch osmo nm-connection-editor acpi python customtkinter neovim zsh zsh-theme-powerlevel10k-git bat spotify"
 fi
 
 read -p "Would you like to install some fonts?[Y/n]" -n 1 -r
