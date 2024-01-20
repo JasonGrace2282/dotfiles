@@ -6,7 +6,7 @@
 # fi
 
 pkglist="zsh picom pcmanfm maim dunst kitty"
-I3="i3-wm polybar rofi xss-lock i3lock-color"
+I3="i3-wm polybar rofi xss-lock i3lock-color feh"
 awesome="awesome-git rofi"
 hypr="hyprland waybar rofi-lbonn-wayland wl-clipboard wl-clipboard-x11"
 # check which WMs to install
@@ -30,7 +30,7 @@ read -p "Would you like to install some fonts?" -n 1 -r
 echo
 if [[ ! $REPLY =~ ^[Nn]$ ]]
 then
-    pkglist="${pkglist} ttf-google-fonts-git ttf-font-awesome"
+  pkglist="${pkglist} ttf-google-fonts-git ttf-font-awesome $(pacman -Ssq noto-font)"
 
 read -p "Would you like to install vi-like keybinds for firefox?[y/N] " -n 1 -r
 echo  
