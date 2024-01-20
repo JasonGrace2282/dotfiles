@@ -1,17 +1,18 @@
 # JasonGrace2282's Dotfiles
-![image](https://github.com/JasonGrace2282/dotfiles/assets/110117391/9ad599f3-cd5a-45d6-aca6-690ab63eff1a)
+![Screenshot of my setup](https://github.com/JasonGrace2282/dotfiles/assets/110117391/a97016ac-0f66-4571-a282-648f85bf26a7)
+
 
 This is a git backup of most of my files in `~/.config`. Among them you can find:
-* Awesome WM config
+* Awesome WM config (basic, for screenshots see [this](https://github.com/JasonGrace2282/awesome-wm))
 * Hyprland config
-* i3 and i3status
+* i3
 * Polybar
 * fastfetch
 * `.zshrc`
 * kitty
 * picom
 * rofi
-* My custom simple-settings-gui config
+* [simple-settings-gui](https://github.com/JasonGrace2282/simple_settings_gui) config
 * PCmanFM config
 * Some gtk configs
 
