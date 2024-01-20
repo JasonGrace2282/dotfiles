@@ -1,10 +1,13 @@
+# i3 config file (v4)
+
 set $mod Mod4
-set $HOME /home/jasongrace2282
-set $CONFIG $HOME/.config
-set $I3_CONFIG $CONFIG/i3
-set $SCRIPTS $CONFIG/scripts
+set $CONFIG /home/jasongrace2282/.config
+set $I3_CONFIG /home/jasongrace2282/.config/i3
+set $SCRIPTS /home/jasongrace2282/.config/scripts
 
 include $I3_CONFIG/rules
+
+default_border pixel 1
 
 exec --no-startup-id copyq
 
@@ -15,11 +18,11 @@ exec --no-startup-id bash "$SCRIPTS/battery.sh" &> /tmp/i3log.log
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:fredoka 12
+# font pango:monospace 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+font pango:Fredoka 12
 
 include $I3_CONFIG/startup
 
@@ -32,15 +35,14 @@ include $I3_CONFIG/gaps
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%     && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%     && $refresh_i3status
-bindsym XF86AudioMute        exec --no-startup-id pactl set-sink-mute   @DEFAULT_SINK@ toggle   && $refresh_i3status
-bindsym XF86AudioMicMute     exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute   @DEFAULT_SINK@ toggle   && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
-tiling_drag modifier titlebar
 
 include $I3_CONFIG/movement
 
@@ -50,18 +52,12 @@ include $I3_CONFIG/tags
 
 include $I3_CONFIG/modes
 
-include $I3_CONFIG/commands
+include /home/jasongrace2282/.config/i3/commands
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-# bar {
-#   i3bar_command i3bar --transparency
-#   # status_command i3status -c ~/.config/i3status/config
-#   position top
-#   colors {
-#     background #00000000
-#     statusline #FFFFFF
-#   }
-# }
 
-exec_always --no-startup-id sh $SCRIPTS/launch.sh &> /tmp/i3log.log
+# bar {
+#     status_command i3status
+# }
+exec bash /home/jasongrace2282/.config/scripts/launch.sh

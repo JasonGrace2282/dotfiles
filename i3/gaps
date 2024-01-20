@@ -5,6 +5,7 @@
 # gaps outer|horizontal|vertical|top|left|bottom|right <gap_size>[px]
 
 gaps outer 20px
+gaps inner 10px
 
 # Inner and outer gaps for all windows on a specific workspace.
 # <ws> can be a workspace number or name.
