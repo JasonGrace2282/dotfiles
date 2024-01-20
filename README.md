@@ -3,8 +3,6 @@
 
 
 This is a git backup of most of my files in `~/.config`. Among them you can find:
-* Awesome WM config (basic, for screenshots see [this](https://github.com/JasonGrace2282/awesome-wm))
-* Hyprland config
 * i3
 * Polybar
 * fastfetch
