@@ -21,7 +21,7 @@ bindsym $mod+d exec bash $SCRIPTS/roficonf.sh &> /tmp/i3log.log
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
-bindsym $mod+Ctrl+Shift+l exec --no-startup-id bash $I3_CONFIG/scripts/i3lock.sh &> /tmp/i3log.log
+bindsym $mod+Ctrl+Shift+l exec --no-startup-id bash $SCRIPTS/i3lock.sh &> /tmp/i3log.log
 
 # reload the configuration file
 # bindsym $mod+Shift+q reload
