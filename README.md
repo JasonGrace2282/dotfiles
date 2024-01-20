@@ -22,7 +22,8 @@ Execute the following commands to backup your current configuration and install 
 mv ~/.config ~/.config.backup
 git clone https://github.com/JasonGrace2282/dotfiles.git ~/.config
 ```
-You will then need to manually change all the `/home/jasongrace2282`'s to the absolute path of the user you are using it for.
+You will then need to manually change the `set $HOME /home/jasongrace2282` to `set $HOME /home/<your username>`. If you are unsure of your username, try
+ running `whoami` in a terminal.
 
 If you are on archlinux, there is a handy script to install most dependencies for you, just run
 ```bash
