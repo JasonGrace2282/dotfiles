@@ -1,5 +1,5 @@
 import customtkinter as ctk
-import os
+import os, sys
 
 ctk.set_appearance_mode("dark")
 r = ctk.CTk()
@@ -13,7 +13,7 @@ def quit(*_):
     r.destroy()
     if tmp:
         os.system(f"maim -s ~/Pictures/Screenshots/{tmp}.png")
-        print(f"Ran: maim -s ~/Pictures/Screenshots/{tmp}.png")
+        os.system(f"dunstify \"Took Screenshot\" \"Located at ~/Pictures/Screenshots/{tmp}.png\"")
 ctk.CTkButton(r, command=quit, text="Enter").pack(pady=5)
 r.bind("<Return>", quit)
 r.title("Screenshot to File")
