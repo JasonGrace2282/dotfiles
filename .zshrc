@@ -73,8 +73,11 @@ export ZSH_AUTOSUGGEST_STRATEGY=history
 export MOZ_ENABLE_WAYLAND=0
 export EDITOR='nvim'
 
-# autoload predict-on
-# predict-on
+export SCREENSHOTS="~/Pictures/Screenshots"
+export REPOS="~/repos"
+export SCHOOL="~/repos/school"
+export DOCUMENTS="~/Documents"
+export DOWNLOADS="~/Downloads"
 
 bindkey "\t" autosuggest-accept
 bindkey "^[[3~" delete-char # otherwise delete creates tilda
