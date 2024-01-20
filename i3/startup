@@ -7,7 +7,7 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id nm-applet &
 
 # picom
-exec --no-startup-id picom -b --config ~/.config/picom/picom.conf
+exec --no-startup-id picom --animations -b --config ~/.config/picom/picom.conf
 
 
 # notifications

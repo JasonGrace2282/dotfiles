@@ -5,7 +5,7 @@
 #    exit 1
 # fi
 
-pkglist="zsh picom pcmanfm maim dunst kitty"
+pkglist="zsh picom-ftlabs-git pcmanfm maim dunst kitty"
 I3="i3-wm polybar rofi xss-lock i3lock-color feh"
 awesome="awesome-git rofi"
 hypr="hyprland waybar rofi-lbonn-wayland wl-clipboard wl-clipboard-x11"
