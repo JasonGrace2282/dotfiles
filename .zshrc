@@ -129,6 +129,7 @@ alias gppo='git push origin'
 alias gs='git status'
 alias gl='git log --oneline'
 alias gcl='git clone'
+alias gd='git diff'
 
 
 alias sudo='sudo ' # evaluate aliases after sudo
