@@ -23,7 +23,7 @@ read -p "Would you like to install some extra utilities?[Y/n] " -n 1 -r
 echo
 if [[ ! $REPLY =~ ^[Nn]$ ]]
 then
-    pkglist="${pkglist} fastfetch osmo nm-connection-editor acpi python customtkinter neovim zsh zsh-theme-powerlevel10k-git"
+    pkglist="${pkglist} fastfetch osmo nm-connection-editor acpi python customtkinter neovim zsh zsh-theme-powerlevel10k-git bat"
 fi
 
 read -p "Would you like to install some fonts?" -n 1 -r
