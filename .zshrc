@@ -70,9 +70,8 @@ export BAT_THEME="TwoDark"
 export CHROOT="/home/jasongrace2282/chroot"
 export MOZ_DBUS_REMOTE=1 firefox
 export ZSH_AUTOSUGGEST_STRATEGY=history
-export MOZ_ENABLE_WAYLAND=1
-export HYPRSHOT_DIR="~/Pictures/Screenshots"
-# export GDK_BACKEND=x11
+export MOZ_ENABLE_WAYLAND=0
+export EDITOR='nvim'
 
 # autoload predict-on
 # predict-on
