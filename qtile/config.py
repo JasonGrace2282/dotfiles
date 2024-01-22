@@ -8,6 +8,7 @@ from constants import *
 from hooks import *
 from misc import *
 
+from libqtile import layout
 from libqtile.config import Click, Drag, Group, Key, Match
 from libqtile.lazy import lazy
 
@@ -40,7 +41,7 @@ layouts = [
 
 widget_defaults = dict(
     font="Fredoka",
-    fontsize=12,
+    fontsize=18,
     padding=3,
 )
 extension_defaults = widget_defaults.copy()

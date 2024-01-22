@@ -1,7 +1,8 @@
 {
   "settings": {
-    "thunar": "lxappearance",
-    "sddm": "sddm-conf"
+    "gtk": "lxappearance",
+    "sddm": "sddm-conf",
+    "task manager": "resources"
   },
   "appearance": "dark",
   "font": null,

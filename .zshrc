@@ -77,6 +77,7 @@ export REPOS="~/repos"
 export SCHOOL="~/repos/school"
 export DOCUMENTS="~/Documents"
 export DOWNLOADS="~/Downloads"
+export QTILELOG="~/.local/share/qtile/qtile.log"
 
 bindkey "\t" autosuggest-accept
 bindkey "^[[3~" delete-char # otherwise delete creates tilda
@@ -107,6 +108,7 @@ alias dns='bat -pp /etc/resolv.conf'
 alias pwd='print -P %~'
 alias settings='python ~/repos/simple_settings_gui/settings_gui.py'
 alias venv='source .venv/bin/activate; echo "Activated Virtual Environment with $(python --version)!"'
+alias ql='cat ${QTILELOG}'
 
 # lazyness of typing
 alias shell='poetry shell'
