@@ -12,7 +12,7 @@ else
 fi
 
 pkglist="zsh pcmanfm dunst kitty"
-I3="i3-wm polybar rofi xss-lock i3lock-color feh picom-ftlabs-git maim python-i3ipc"
+I3="i3-wm polybar rofi xss-lock i3lock-color feh picom maim python-i3ipc"
 pkglist="${I3} ${pkglist}"
 
 echo "Would you like to install some extra utilities?"
