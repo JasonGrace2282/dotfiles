@@ -10,7 +10,6 @@
     "packages",
     "shell",
     "display",
-    "de",
     "wm",
     "wmtheme",
     "theme",
@@ -19,7 +18,6 @@
     "cpu",
     "gpu",
     "memory",
-    "swap",
     "disk",
     "break",
     "colors"
