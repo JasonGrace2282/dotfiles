@@ -39,8 +39,14 @@ keys = [
         desc="Toggle between split and unsplit sides of stack",
     ),
     Key([mod], "Return", lazy.spawn(terminal), lazy.layout.left(), desc="Launch terminal"),
-    # Toggle between different layouts as defined below
-    Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
+    Key([mod], "Tab",
+        lazy.layout.down(),
+        desc="Move along spiral"
+    ),
+    Key([mod, "shift"], "Tab",
+        lazy.layout.up(),
+        desc="Move backwards through spiral"
+    ),
     Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
     Key(
         [mod],
@@ -48,7 +54,6 @@ keys = [
         lazy.window.toggle_fullscreen(),
         desc="Toggle fullscreen on the focused window",
     ),
-    # Key([mod], "t", lazy.window.toggle_floating(), desc="Toggle floating on the focused window"),
     Key([mod, "shift"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "d", lazy.spawn("rofi -show drun"), desc="Spawn a command using a prompt widget"),

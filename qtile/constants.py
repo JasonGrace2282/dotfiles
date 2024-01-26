@@ -39,5 +39,6 @@ colors = {
     "base": "#1E1E2E",
     "mantle": "#181825",
     "background_darker": "#1f2335", # background darker
-    "transparent": "#00000000",
+    "transparent": "#0018181e",
+    "lightblue": "#80b7e2",
 }

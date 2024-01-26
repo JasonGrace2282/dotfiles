@@ -8,11 +8,7 @@ from constants import colors, decoration_defaults
 
 screens = [
     Screen(
-        bottom = bar.Bar([           #widget.Sep(
-            #   linewidth = 4,
-            #   background = colors["systray"],
-            #   foreground = colors["systray"],
-            #),
+        bottom = bar.Bar([
             widget.Spacer(length = 5),
             widget.GroupBox(
                 hide_unused = True,
@@ -20,17 +16,17 @@ screens = [
                 toggle = False,
                 highlight_method = "block",
                 borderwidth = 4,
-                this_current_screen_border = colors["blue"],            # block fill color
-                block_highlight_text_color = colors["background"],      # block text color
-                active = colors["background_darker"],                   # text color
-                other_screen_border = colors["grey"],                   # block fill color other screens
+                this_current_screen_border = colors["blue"],
+                block_highlight_text_color = colors["background"],
+                active = colors["background_darker"],
+                other_screen_border = colors["grey"],
                 inactive = colors["white"],
                 urgent_alert_method = "block",
                 urgent_border = colors["purple"],
                 urgent_text = colors["red"],
                 spacing = 4,
                 margin_x = 6,
-                margin_y = 3,                                           # push labels down
+                margin_y = 3,
                 padding_x = 2,
                 padding_y = 2,
                 decorations = [
@@ -49,7 +45,8 @@ screens = [
                     ),
                 ],
                 text_closed = '^',
-                text_open = 'v'
+                text_open = 'v',
+                foreground = colors["lightblue"]
             ),
             widget.TaskList(
                 theme_path = "/usr/share/icons/Papirus/index.theme",
@@ -57,13 +54,13 @@ screens = [
                 highlight_method = 'block',
                 icon_size = 18,
                 max_title_width = 150,
-                margin = 1.9,                   # match to center
-                padding = 6.5,                  # size of a block
+                margin = 1.9,
+                padding = 6.5,
                 fontsize = 18,
                 font = "Fredoka",
-                border = colors["background"],  # fill current window
-                foreground = "#ffffff",         # text colors
-                borderwidth = 3,                # icon position
+                border = colors["background"],
+                foreground = colors["lightblue"],
+                borderwidth = 3,
                 urgent_border = colors["red"],
                 txt_floating = ' ',
                 txt_minimized = '_ ',
@@ -73,7 +70,12 @@ screens = [
                 emoji = False,
                 mute_command = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
                 volume_down_command = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
-                volume_up_command = "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
+                volume_up_command = "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+",
+                volume_app = "wpctl",
+                get_volume_command = "volume=\"$(wpctl get-volume @DEFAULT_AUDIO_SINK@)\"\
+                && echo \"${volume:8}%\"",
+                check_mute_string = "volume=\"$(wpctl get-volume @DEFAULT_AUDIO_SINK@)\"\
+                && echo \"${volume:8}%\""
             ),
             widget.Battery(
                 padding = 8,
@@ -83,7 +85,8 @@ screens = [
                         colour = colors["orange"],
                         **decoration_defaults
                     )
-                ]
+                ],
+                foreground = colors["lightblue"]
             ),
             widget.Clock(
                 padding = 8,
@@ -95,6 +98,7 @@ screens = [
                         **decoration_defaults,
                     )
                 ],
+                foreground = colors["lightblue"]
             ),
             ],
             35, # WIDTH
