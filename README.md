@@ -4,6 +4,7 @@
 
 This is a git backup of most of my files in `~/.config`. Among them you can find:
 * i3
+* qtile (work in progress)
 * Polybar
 * fastfetch
 * `.zshrc`
