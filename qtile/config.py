@@ -12,7 +12,13 @@ from libqtile import layout
 from libqtile.config import Click, Drag, Group, Key, Match
 from libqtile.lazy import lazy
 
-groups = [Group(i) for i in "123456789"]
+
+groups = []
+for i in "123456789":
+    groups.append(Group(
+        i,
+        matches=[Match(wm_class=x) for x in matches.get(i, ())]
+    ))
 
 for i in groups:
     keys.extend(

@@ -1,7 +1,10 @@
-from libqtile.utils import guess_terminal
 
 mod = "mod4"
-terminal = guess_terminal()
+terminal = "kitty"
+
+matches = {
+    2: ("discord",)
+}
 
 decoration_defaults = dict(
     # colour = colors["white"],

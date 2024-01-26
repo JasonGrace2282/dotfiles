@@ -2,5 +2,6 @@
 
 
 feh --bg-scale ~/.config/background/archbg.png &
-picom --animations -b
+picom -b
 nm-applet &
+greenclip

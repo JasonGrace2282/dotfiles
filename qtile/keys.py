@@ -54,11 +54,12 @@ keys = [
         lazy.window.toggle_fullscreen(),
         desc="Toggle fullscreen on the focused window",
     ),
-    Key([mod, "shift"], "r", lazy.reload_config(), desc="Reload the config"),
+    Key([mod, "shift"], "r", lazy.spawn("dunstify \"Reloading config\""), lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "d", lazy.spawn("rofi -show drun"), desc="Spawn a command using a prompt widget"),
     Key([mod], "q", lazy.spawn("firefox"), desc="Launch Browser (Firefox)"),
     Key([mod, "shift"], "d", lazy.spawn("discord"), desc="Launch Discord"),
+    Key([mod], "p", lazy.spawn('dunstctl close-all', desc="Close all notifications")),
 
     # volume
     Key([], "XF86AudioMute", lazy.spawn("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle") ),

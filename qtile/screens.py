@@ -20,7 +20,7 @@ screens = [
                 block_highlight_text_color = colors["background"],
                 active = colors["background_darker"],
                 other_screen_border = colors["grey"],
-                inactive = colors["white"],
+                inactive = colors["lightblue"],
                 urgent_alert_method = "block",
                 urgent_border = colors["purple"],
                 urgent_text = colors["red"],
@@ -65,17 +65,16 @@ screens = [
                 txt_floating = ' ',
                 txt_minimized = '_ ',
             ),
-            widget.Volume(
+            widget.PulseVolume(
                 padding = 8,
-                emoji = False,
+                emoji = True,
                 mute_command = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
                 volume_down_command = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
                 volume_up_command = "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+",
-                volume_app = "wpctl",
-                get_volume_command = "volume=\"$(wpctl get-volume @DEFAULT_AUDIO_SINK@)\"\
-                && echo \"${volume:8}%\"",
-                check_mute_string = "volume=\"$(wpctl get-volume @DEFAULT_AUDIO_SINK@)\"\
-                && echo \"${volume:8}%\""
+                # volume_app = "wpctl",
+                get_volume_command = "volume=\"$(wpctl get-volume @DEFAULT_AUDIO_SINK@)\" && echo \"${volume:8}%\"",
+                check_mute_string = "volume=\"$(wpctl get-volume @DEFAULT_AUDIO_SINK@)\" && echo \"${volume:8}% [MUTED]\"",
+                foreground = colors["lightblue"]
             ),
             widget.Battery(
                 padding = 8,
