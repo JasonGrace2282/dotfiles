@@ -50,3 +50,16 @@ function gcmpo ()
 {
   git commit -m $1; git push
 }
+
+function gcbm ()
+{
+  if [[ "$(git branch -vv | grep "main" > /dev/null && echo $?)" == "0" ]]
+  then
+    git checkout main
+  elif [[ "$(git branch -vv | grep "master" > /dev/null && echo $?)" == "0" ]]
+  then
+    git checkout master
+  else
+    echo "Could not find main branch"
+  fi
+}
