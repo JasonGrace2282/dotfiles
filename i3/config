@@ -15,7 +15,8 @@ exec --no-startup-id greenclip daemon
 exec_always --no-startup-id killall xss-lock
 exec_always --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -i $CONFIG/background/i3lock.png --ring-color=1c60e3 --keyhl-color=9feef5 --noinput-text="empty" --verif-text="verified" --time-str="%I:%M:%S" &> /tmp/i3log.log
 
-exec --no-startup-id bash "$SCRIPTS/battery.sh" &> /tmp/i3log.log
+# I started using batsignal instead
+# exec --no-startup-id bash "$SCRIPTS/battery.sh" &> /tmp/i3log.log
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
