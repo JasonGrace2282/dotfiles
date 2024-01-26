@@ -5,6 +5,8 @@ from enum import Enum
 class DIRECTION(Enum):
     LEFT = "left"
     RIGHT = "right"
+    UP = "up"
+    DOWN = "down"
 
 class Spiral(QtileSpiral):
     def move_horizontal(self, direction: DIRECTION):

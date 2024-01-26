@@ -1,6 +1,3 @@
-import os
-import subprocess
-
 from screens import screens
 from keys import keys
 from custom_spiral import Spiral
