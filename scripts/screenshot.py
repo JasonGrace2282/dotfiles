@@ -1,5 +1,7 @@
+#!/bin/env python
+
 import customtkinter as ctk
-import os, sys
+import os
 
 ctk.set_appearance_mode("dark")
 

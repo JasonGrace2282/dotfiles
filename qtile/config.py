@@ -1,5 +1,5 @@
 from screens import screens
-from keys import keys
+from keybinds import keys
 from custom_spiral import Spiral
 from constants import *
 from hooks import *
