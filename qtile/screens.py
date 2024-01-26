@@ -44,8 +44,8 @@ screens = [
                         padding = 2,
                     ),
                 ],
-                text_closed = '^',
-                text_open = 'v',
+                text_closed = '>',
+                text_open = '<',
                 foreground = colors["lightblue"]
             ),
             widget.TaskList(

@@ -3,6 +3,8 @@ from libqtile.config import Key
 from constants import mod, terminal
 import os, subprocess
 
+__all__ = ["shortcuts"]
+
 def take_screenshot(qtile):
     os.system("maim -s | xclip -selection clipboard -t image/png")
 
@@ -38,4 +40,6 @@ shortcuts = [
 
     Key([mod, "shift"], "s", lazy.function(take_screenshot), desc="take screenshot"),
     Key([mod], "c", lazy.function(save_screenshot), desc="save screenshot to file"),
+
+    # Key([mod, "control", "shift"], "l",)
 ]

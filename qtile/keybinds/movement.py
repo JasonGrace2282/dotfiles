@@ -2,6 +2,8 @@ from libqtile.lazy import lazy
 from libqtile.config import Key
 from constants import mod
 
+__all__ = ["movement"]
+
 movement = [
     # Switch between windows
     Key(

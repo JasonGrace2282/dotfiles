@@ -1,6 +1,8 @@
 from libqtile.lazy import lazy
 from libqtile.config import Key
 
+__all__ = ["volume"]
+
 volume = [
     Key([], "XF86AudioMute", lazy.spawn("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle") ),
     Key([], "XF86AudioLowerVolume", lazy.spawn("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-")),
