@@ -40,3 +40,13 @@ function spotify ()
     spotify
   fi
 }
+
+function gcampo ()
+{
+  git commit -a -m $1;git push
+}
+
+function gcmpo ()
+{
+  git commit -m $1; git push
+}
