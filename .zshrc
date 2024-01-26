@@ -63,6 +63,16 @@ function usbmount ()
   fi
 }
 
+function spotify ()
+{
+  if [[ "$(command -v spotify)" != "" ]]
+  then
+    spotify-launcher
+  else
+    spotify
+  fi
+}
+
 export KITTY_SHELL_INTEGRATION="enabled"
 export PATH="$HOME/.ghcup/bin:$PATH"
 export AUTOENV_FILE_LEAVE=".autoenv.zsh"
