@@ -17,7 +17,7 @@ groups = []
 for i in "123456789":
     groups.append(Group(
         i,
-        matches=[Match(wm_class=x) for x in matches.get(i, ())]
+        matches=[Match(wm_class=x) for x in matches.get(int(i), ())]
     ))
 
 for i in groups:

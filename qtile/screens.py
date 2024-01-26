@@ -67,14 +67,15 @@ screens = [
             ),
             widget.PulseVolume(
                 padding = 8,
-                emoji = True,
+                emoji = False,
                 mute_command = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
                 volume_down_command = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
                 volume_up_command = "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+",
                 # volume_app = "wpctl",
                 get_volume_command = "volume=\"$(wpctl get-volume @DEFAULT_AUDIO_SINK@)\" && echo \"${volume:8}%\"",
                 check_mute_string = "volume=\"$(wpctl get-volume @DEFAULT_AUDIO_SINK@)\" && echo \"${volume:8}% [MUTED]\"",
-                foreground = colors["lightblue"]
+                foreground = colors["lightblue"],
+                fmt="Vol: {0}"
             ),
             widget.Battery(
                 padding = 8,
@@ -88,9 +89,9 @@ screens = [
                 foreground = colors["lightblue"]
             ),
             widget.Clock(
-                padding = 8,
-                format = "%A, %d %b %H:%M",
-                mouse_callbacks = {'Button1': lazy.spawn("gsimplecal")},
+                padding = 12,
+                format = "%A, %d %b %I:%M",
+                mouse_callbacks = {'Button1': lazy.spawn("osmo")},
                 decorations = [
                     RectDecoration(
                         colour = colors["orange"],
@@ -101,7 +102,6 @@ screens = [
             ),
             ],
             35, # WIDTH
-            # margin = 4,
             margin = 2,
             background = colors["transparent"],
         ),
