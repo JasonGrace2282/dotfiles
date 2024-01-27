@@ -1,4 +1,3 @@
-
 mod = "mod4"
 terminal = "kitty"
 
@@ -8,13 +7,38 @@ matches = {
     2: ("discord",)
 }
 
-decoration_defaults = {
-    # colour = colors["white"],
-    "radius" : 20,
-    "filled" : False,
-    "group"  : True,
-    "padding": 4,
-}
+# todo: move to colors dict
+### COLORS
+bar_bg = "#24283b"
+widget_group_color = '303045'
+arch_color = '1793d1'
+term_colors = [
+            '000000', 'ff5555', '50fa7b', 'f0fa8b', '2c79d9', 'ff78c5', '8ae9fc', 'bbbbbb',
+            '999999', 'ff5454', '50fa7b', 'f0fa8b', '2c79d9', 'ff78c5', '8ae9fc', 'ffffff'
+            ]
+
+### ICONS
+arch_icon = ' '
+mail_icon = ''
+github_icon = ''
+reddit_icon = ''
+calendar_icon = ''
+clock_icon = '󰥔'
+cpu_icon = ''
+memory_icon = ''
+disk_icon = '󰋊'
+net_icon = '󰈀'
+down_arrow_icon = '↓'
+up_arrow_icon = '↑'
+power_icon = ''
+widget_lsep = ''
+widget_rsep = ''
+
+widget_sep_size = 30
+top_window_margin = 3
+window_margin = 3
+bar_size = 35
+
 colors = {
     "white": "#b7c0ea",         # white-ish
     "grey": "#949cbe",          # grey-ish

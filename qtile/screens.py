@@ -1,119 +1,139 @@
 from libqtile import bar, widget
 from libqtile.config import Screen
-from libqtile.lazy import lazy
 from qtile_extras.widget.decorations import RectDecoration
-import qtile_extras.widget as extrawidgets
 
-from constants import colors, decoration_defaults
-
-decorate = {
-    "decorations": [
-        RectDecoration(
-            colour=colors["white"],
-            **decoration_defaults
-        )
-    ],
-}
+from constants import *
 
 screens = [
     Screen(
-        bottom = bar.Bar([
-            widget.Spacer(length = 5),
-            widget.GroupBox(
-                hide_unused = True,
-                disable_drag = True,
-                toggle = False,
-                highlight_method = "block",
-                borderwidth = 4,
-                this_current_screen_border = colors["blue"],
-                block_highlight_text_color = colors["background"],
-                active = colors["background_darker"],
-                other_screen_border = colors["grey"],
-                inactive = colors["lightblue"],
-                urgent_alert_method = "block",
-                urgent_border = colors["purple"],
-                urgent_text = colors["red"],
-                spacing = 4,
-                margin_x = 6,
-                margin_y = 3,
-                padding_x = 2,
-                padding_y = 2,
-                decorations = [
-                    RectDecoration(
-                        colour = colors["white"],
-                        **decoration_defaults,
-                    )
-                ],
-            ),  
-            widget.TaskList(
-                theme_path = "/usr/share/icons/Papirus/index.theme",
-                theme_mode = "preferred",
-                highlight_method = 'block',
-                icon_size = 18,
-                max_title_width = 150,
-                margin = 1.9,
-                padding = 6.5,
-                fontsize = 18,
-                font = "Fredoka",
-                border = colors["background"],
-                foreground = colors["lightblue"],
-                borderwidth = 3,
-                urgent_border = colors["red"],
-                txt_floating = ' ',
-                txt_minimized = '_ ',
-                rounded=True
-            ),
-            widget.WidgetBox(
-                widgets=[
-                    widget.Systray(
-                        icon_size = 30,
-                        padding = 2,
-                    ),
-                ],
-                text_closed = '<',
-                text_open = '>',
-                foreground = colors["lightblue"],
-                **decorate
-            ),
-            widget.PulseVolume(
-                padding = 8,
-                emoji = False,
-                mute_command = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-                volume_down_command = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
-                volume_up_command = "wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+",
-                # volume_app = "wpctl",
-                get_volume_command = "volume=\"$(wpctl get-volume @DEFAULT_AUDIO_SINK@)\" && echo \"${volume:8}%\"",
-                check_mute_string = "volume=\"$(wpctl get-volume @DEFAULT_AUDIO_SINK@)\" && echo \"${volume:8}% [MUTED]\"",
-                foreground = colors["lightblue"],
-                fmt="Vol: {0}"
-            ),
-            widget.Battery(
-                padding = 8,
-                format = "{percent:2.0%} ({hour:d}h:{min:02d} left)",
-                decorations = [
-                    RectDecoration(
-                        colour = colors["orange"],
-                        **decoration_defaults
-                    )
-                ],
-                foreground = colors["lightblue"]
-            ),
-            widget.Clock(
-                padding = 12,
-                format = "%A, %d %b %I:%M",
-                mouse_callbacks = {'Button1': lazy.spawn("tkremind")},
-                decorations = [
-                    RectDecoration(
-                        colour = colors["orange"],
-                        **decoration_defaults,
-                    )
-                ],
-                foreground = colors["lightblue"]
-            ),
+        bottom = bar.Bar(
+            [
+                widget.TextBox(
+                    foreground = arch_color,
+                    text = " " + arch_icon,
+                    mouse_callbacks = { 'Button1': lambda qtile: qtile.cmd_spawn('firefox https://archlinux.org/') },
+                    fontsize = 20,
+                ),
+                widget.GroupBox(
+                    hide_unused = True,
+                ),
+
+                widget.WindowName(
+                    foreground = arch_color,
+                ),
+
+                widget.TextBox(
+                    foreground = widget_group_color,
+                    text = widget_rsep,
+                    padding = 0,
+                    fontsize = widget_sep_size,
+                ),
+
+                widget.WidgetBox(
+                    widgets = [
+                        widget.CPU(
+                            foreground = term_colors[3],
+                            background = widget_group_color,
+                            format = cpu_icon + ' {load_percent}%',
+                        ),
+
+                        widget.Memory(
+                            foreground = term_colors[2],
+                            background = widget_group_color,
+                            measure_mem = 'G',
+                            format = memory_icon + ' {MemPercent:.0f}%',
+                        ),
+
+                        widget.DF(
+                            foreground = term_colors[5],
+                            background = widget_group_color,
+                            visible_on_warn = False,
+                            format = disk_icon + ' {r:.0f}%',
+                        ),
+
+                        widget.Net(
+                            foreground = term_colors[6],
+                            background = widget_group_color,
+                            format = net_icon + ' {down} ' + down_arrow_icon,
+                        ),
+                        ],
+                    background = widget_group_color,
+                    foreground = arch_color,
+                    text_closed = '<',
+                    text_open = '>',
+                ),
+
+                widget.TextBox(
+                    foreground = widget_group_color,
+                    text = widget_lsep + " ",
+                    padding = 0,
+                    fontsize = widget_sep_size,
+                ),
+
+                widget.TextBox(
+                    foreground = widget_group_color,
+                    text = widget_rsep,
+                    padding = 0,
+                    fontsize = widget_sep_size,
+                ),
+
+                widget.Moc(
+                    background = widget_group_color,
+                    foreground = arch_color,
+                ),
+
+                widget.TextBox(
+                    foreground = widget_group_color,
+                    text = widget_lsep + " ",
+                    padding = 0,
+                    fontsize = widget_sep_size,
+                ),
+
+                widget.TextBox(
+                    foreground = widget_group_color,
+                    text = widget_rsep,
+                    padding = 0,
+                    fontsize = widget_sep_size,
+                ),
+                widget.Systray(
+                    background = widget_group_color,
+                ),
+
+                widget.TextBox(
+                    foreground = widget_group_color,
+                    text = widget_lsep + " ",
+                    padding = 0,
+                    fontsize = widget_sep_size,
+                ),
+
+                widget.TextBox(
+                    foreground = widget_group_color,
+                    text = widget_rsep,
+                    padding = 0,
+                    fontsize = widget_sep_size,
+                ),
+
+                widget.Clock(
+                    format = calendar_icon + "  %a %m/%d | " + clock_icon + " %I:%M",
+                    background = widget_group_color,
+                    foreground = arch_color,
+                    padding = 10,
+                ),
+
+                widget.TextBox(
+                    foreground = widget_group_color,
+                    text = widget_lsep,
+                    padding = 0,
+                    fontsize = widget_sep_size,
+                ),
+
             ],
-            35, # WIDTH
-            margin = 2,
-            background = colors["transparent"],
+            size=bar_size,
+            background_opacity = 0.5,
+            #opacity = 0.6,
+            margin = window_margin,
+            border_width = [5, 5, 5, 0],
+            border_color = bar_bg,
         ),
     )
 ]
