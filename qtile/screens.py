@@ -75,27 +75,19 @@ screens = [
                     fontsize = widget_sep_size,
                 ),
 
-                widget.WidgetBox(
-                    widgets = [
-                        widget.Battery(
-                            background = widget_group_color,
-                            foreground = term_colors[3],
-                            format = "{percent:2.0%} ({hour:d}h:{min:02d} left)"
-                        ),
-
-                        widget.PulseVolume(
-                            background = widget_group_color,
-                            foreground = term_colors[5],
-                            fmt = f"{volume} {{}}"
-                        ),
-                    ],
+                widget.Battery(
                     background = widget_group_color,
-                    foreground = arch_color,
-                    text_closed = '< ',
-                    text_open = '> ',
-                    start_opened = True
+                    foreground = colors["lightblue"],
+                    format = "⚡{percent:2.0%} ({hour:d}h:{min:02d} left)"
                 ),
-                widget.TextBox(
+
+                widget.PulseVolume(
+                    background = widget_group_color,
+                    foreground = term_colors[5],
+                    fmt = f"{volume} {{}}"
+                ),
+
+               widget.TextBox(
                     foreground = widget_group_color,
                     text = widget_lsep + " ",
                     padding = 0,
