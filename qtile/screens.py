@@ -18,6 +18,7 @@ screens = [
 
                 widget.WindowName(
                     foreground = arch_color,
+                    padding = 20,
                 ),
 
                 widget.TextBox(
