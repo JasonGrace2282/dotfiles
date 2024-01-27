@@ -1,0 +1,99 @@
+# TkRemind option file -- created automatically
+# Sat Jan 27 10:11:42 EST 2024
+# Format of each line is 'key value' where 'key'
+# specifies the option name, and 'value' is a
+# *legal Tcl list element* specifying the option value.
+
+# (0/1) If 1, TkRemind automatically closes pop-up reminders after a minute
+AutoClose 1
+
+# Default background color of calendar boxes
+BackgroundColor #000000
+
+# Font to use in calendar boxes in Tk font format
+CalboxFont {-family {Noto Sans Mono} -size 9 -weight normal -slant roman -underline 0 -overstrike 0}
+
+# (0/1) If 1, TkRemind prompts you to confirm 'Quit' operation
+ConfirmQuit 0
+
+# (w/center/e) Anchor the day number to the left (w), center or right (e) of its container
+DayAnchor center
+
+# (0/1) If 1, TkRemind deiconifies the calendar window when a reminder pops up
+Deiconify 0
+
+# (String) Specify command to edit a file.  %d is replaced with line number and %s with filename
+Editor {nvim +%d %s}
+
+# (String) Extra arguments when invoking remind
+ExtraRemindArgs {}
+
+# (0/1) If 1, feed the reminder to RunCmd on standard input (see RunCmd option)
+FeedReminder 0
+
+# Font to use in calendar headings in Tk font format
+HeadingFont {-family {Noto Sans} -size 9 -weight normal -slant roman -underline 0 -overstrike 0}
+
+# Default label color for headings
+LabelColor #00ffff
+
+# Color of gridlines on calendar
+LineColor #0080fc
+
+# (String) Specify an e-mail address to which reminders should be sent if the popup window is not manually dismissed
+MailAddr {}
+
+# (0/1) If 1, put day numbers in the top-right of each calendar box
+PrintDaysRight 1
+
+# Print destination: file or command
+PrintDest file
+
+# (0/1) If 1, apply ISO-8859-1 encoding to PostScript output
+PrintEncoding 0
+
+# (0/1) If 1, fill entire page when printing
+PrintFill 1
+
+# Print format: pdf or ps
+PrintFormat ps
+
+# Print margins: One of 24pt, 36pt or 48pt
+PrintMargins 36pt
+
+# Page orientation: portrait or landscape
+PrintOrient landscape
+
+# Page size: a4 or letter
+PrintSize letter
+
+# (0/1) If 1, print small calendars in PostScript output
+PrintSmallCalendars 1
+
+# (0/1) If 1, TkRemind beeps the terminal when a pop-up reminder appears
+RingBell 0
+
+# (String) If non-blank, run specified command when a pop-up reminder appears
+RunCmd {}
+
+# (String) IP address or host name of SMTP server to use for sending e-mail
+SMTPServer 127.0.0.1
+
+# (0/1) If 1, TkRemind shows all of today's non-timed reminders in a window at startup and when the date changes
+ShowTodaysReminders 0
+
+# (0/1) If 1, TkRemind starts up in the iconified state
+StartIconified 0
+
+# Default text color in calendar boxes
+TextColor #ffffff
+
+# Background color for today heading
+TodayColor #b000b6
+
+# Background color of calendar window
+WinBackground #000000
+
+# (0/1) If 1, make printed calendars occupy at most 5 rows
+WrapCal 0
+
