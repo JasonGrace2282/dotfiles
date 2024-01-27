@@ -38,7 +38,13 @@ for i in groups:
     )
 
 layouts = [
-    Spiral(new_client_position='after', ratio=0.5, margin=20, border_width=2),
+    Spiral(
+        new_client_position='after',
+        ratio=0.5,
+        margin=20,
+        border_width=4,
+        border_focus="#6babcd"
+    ),
     layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
 ]
 

@@ -20,7 +20,7 @@ read -p "Note that without these utilities, some functions may not work[Y/n] " -
 echo
 if [[ ! $REPLY =~ ^[Nn]$ ]]
 then
-    pkglist="${pkglist} fastfetch osmo nm-connection-editor acpi python customtkinter neovim zsh zsh-theme-powerlevel10k-git bat spotify rofi-greenclip batsignal"
+    pkglist="${pkglist} fastfetch tkremind inetutils tcllib nm-connection-editor acpi python customtkinter neovim zsh zsh-theme-powerlevel10k-git bat spotify rofi-greenclip batsignal"
 fi
 
 read -p "Would you like to install some fonts?[Y/n]" -n 1 -r
@@ -39,7 +39,6 @@ fi
 
 if [[ "$1" != "--no-upgrade" ]]
 then
-    echo "Upgrading archlinux!"
     flag="-Syu"
 else
     echo "Warning: will not upgrade Arch with install"
@@ -56,5 +55,9 @@ then
     exit 1
 fi
 
+echo "source ~/.config/zsh/.zshrc" >> ~/.zshrc
+
+p10k configure
+
 echo "You're almost done! Just install the Fredoka font from google: https://fonts.google.com/specimen/Fredoka"
-echo "Download the font family and then use the command: unzip <installed zip file> && mv Fredoka ~/.local/share/fonts/Fredoka"
+echo "Download the font family and then use the command: unzip <installed zip file>; mkdir -p ~/.local/share/fonts; mv Fredoka ~/.local/share/fonts/Fredoka"

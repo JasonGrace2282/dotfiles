@@ -2,9 +2,18 @@ from libqtile import bar, widget
 from libqtile.config import Screen
 from libqtile.lazy import lazy
 from qtile_extras.widget.decorations import RectDecoration
-import os
+import qtile_extras.widget as extrawidgets
 
 from constants import colors, decoration_defaults
+
+decorate = {
+    "decorations": [
+        RectDecoration(
+            colour=colors["white"],
+            **decoration_defaults
+        )
+    ],
+}
 
 screens = [
     Screen(
@@ -36,18 +45,6 @@ screens = [
                     )
                 ],
             ),  
-            widget.WidgetBox(
-                widgets=[
-                    widget.Systray(
-                        # background = colors["systray"],
-                        icon_size = 30,
-                        padding = 2,
-                    ),
-                ],
-                text_closed = '>',
-                text_open = '<',
-                foreground = colors["lightblue"]
-            ),
             widget.TaskList(
                 theme_path = "/usr/share/icons/Papirus/index.theme",
                 theme_mode = "preferred",
@@ -64,6 +61,19 @@ screens = [
                 urgent_border = colors["red"],
                 txt_floating = ' ',
                 txt_minimized = '_ ',
+                rounded=True
+            ),
+            widget.WidgetBox(
+                widgets=[
+                    widget.Systray(
+                        icon_size = 30,
+                        padding = 2,
+                    ),
+                ],
+                text_closed = '<',
+                text_open = '>',
+                foreground = colors["lightblue"],
+                **decorate
             ),
             widget.PulseVolume(
                 padding = 8,
@@ -91,7 +101,7 @@ screens = [
             widget.Clock(
                 padding = 12,
                 format = "%A, %d %b %I:%M",
-                mouse_callbacks = {'Button1': lazy.spawn("osmo")},
+                mouse_callbacks = {'Button1': lazy.spawn("tkremind")},
                 decorations = [
                     RectDecoration(
                         colour = colors["orange"],

@@ -8,13 +8,13 @@ matches = {
     2: ("discord",)
 }
 
-decoration_defaults = dict(
+decoration_defaults = {
     # colour = colors["white"],
-    radius = 2,
-    filled = True,
-    group = True,
-    padding = 4,
-)
+    "radius" : 20,
+    "filled" : False,
+    "group"  : True,
+    "padding": 4,
+}
 colors = {
     "white": "#b7c0ea",         # white-ish
     "grey": "#949cbe",          # grey-ish
