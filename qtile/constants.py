@@ -33,6 +33,7 @@ up_arrow_icon = '↑'
 power_icon = ''
 widget_lsep = ''
 widget_rsep = ''
+volume = ""
 
 widget_sep_size = 30
 top_window_margin = 3

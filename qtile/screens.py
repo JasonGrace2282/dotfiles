@@ -75,29 +75,25 @@ screens = [
                     fontsize = widget_sep_size,
                 ),
 
-                widget.Battery(
+                widget.WidgetBox(
+                    widgets = [
+                        widget.Battery(
+                            background = widget_group_color,
+                            foreground = term_colors[3],
+                            format = "{percent:2.0%} ({hour:d}h:{min:02d} left)"
+                        ),
+
+                        widget.PulseVolume(
+                            background = widget_group_color,
+                            foreground = term_colors[5],
+                            fmt = f"{volume} {{}}"
+                        ),
+                    ],
                     background = widget_group_color,
                     foreground = arch_color,
-                    format = "{percent:2.0%} ({hour:d}h:{min:02d} left)"
-                ),
-
-                widget.TextBox(
-                    foreground = widget_group_color,
-                    text = widget_lsep + " ",
-                    padding = 0,
-                    fontsize = widget_sep_size,
-                ),
-
-                widget.TextBox(
-                    foreground = widget_group_color,
-                    text = widget_rsep,
-                    padding = 0,
-                    fontsize = widget_sep_size,
-                ),
-
-                widget.PulseVolume(
-                    background = widget_group_color,
-                    foreground = arch_color,
+                    text_closed = '< ',
+                    text_open = '> ',
+                    start_opened = True
                 ),
                 widget.TextBox(
                     foreground = widget_group_color,
@@ -131,7 +127,7 @@ screens = [
                 ),
 
                 widget.Clock(
-                    format = calendar_icon + "  %a %m/%d | " + clock_icon + " %I:%M",
+                    format = f" {calendar_icon}  %a %m/%d | {clock_icon}  %I:%M",
                     background = widget_group_color,
                     foreground = arch_color,
                     padding = 10,
