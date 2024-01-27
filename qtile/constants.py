@@ -2,6 +2,8 @@
 mod = "mod4"
 terminal = "kitty"
 
+wmname = "qtile" # "LG3D"
+
 matches = {
     2: ("discord",)
 }

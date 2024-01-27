@@ -5,9 +5,6 @@ import os, subprocess
 
 __all__ = ["shortcuts"]
 
-def take_screenshot(qtile):
-    os.system("maim -s | xclip -selection clipboard -t image/png")
-
 def save_screenshot(qtile):
     # os.system("python ~/.config/scripts/screenshot.py")
     # current not working?
@@ -38,7 +35,8 @@ shortcuts = [
         desc="Open clipboard history"
     ),
 
-    Key([mod, "shift"], "s", lazy.function(take_screenshot), desc="take screenshot"),
+    Key([mod, "shift"], "s", lazy.spawn("maim -s | xclip -selection clipboard -t image/png", shell=True), desc="take screenshot"),
+    Key([mod, "shift"], "s", lazy.spawn("maim -s | xclip -selection clipboard -t image/png", shell=True), desc="take screenshot"),
     Key([mod], "c", lazy.function(save_screenshot), desc="save screenshot to file"),
 
     # Key([mod, "control", "shift"], "l",)
