@@ -1,6 +1,5 @@
 from libqtile import bar, widget
 from libqtile.config import Screen
-from qtile_extras.widget.decorations import RectDecoration
 
 from constants import *
 
@@ -11,7 +10,6 @@ screens = [
                 widget.TextBox(
                     foreground = arch_color,
                     text = " " + arch_icon,
-                    mouse_callbacks = { 'Button1': lambda qtile: qtile.cmd_spawn('firefox https://archlinux.org/') },
                     fontsize = 20,
                 ),
                 widget.GroupBox(
@@ -77,11 +75,30 @@ screens = [
                     fontsize = widget_sep_size,
                 ),
 
-                widget.Moc(
+                widget.Battery(
+                    background = widget_group_color,
+                    foreground = arch_color,
+                    format = "{percent:2.0%} ({hour:d}h:{min:02d} left)"
+                ),
+
+                widget.TextBox(
+                    foreground = widget_group_color,
+                    text = widget_lsep + " ",
+                    padding = 0,
+                    fontsize = widget_sep_size,
+                ),
+
+                widget.TextBox(
+                    foreground = widget_group_color,
+                    text = widget_rsep,
+                    padding = 0,
+                    fontsize = widget_sep_size,
+                ),
+
+                widget.PulseVolume(
                     background = widget_group_color,
                     foreground = arch_color,
                 ),
-
                 widget.TextBox(
                     foreground = widget_group_color,
                     text = widget_lsep + " ",
