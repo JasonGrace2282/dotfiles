@@ -1,7 +1,9 @@
-from libqtile import bar, widget
+from libqtile import bar, lazy, widget
 from libqtile.config import Screen
 
 from constants import *
+
+lazy = lazy.lazy
 
 screens = [
     Screen(
@@ -11,14 +13,18 @@ screens = [
                     foreground = arch_color,
                     text = " " + arch_icon,
                     fontsize = 20,
+                    mouse_callbacks = {"Button1": lazy.spawn("firefox https://wiki.archlinux.org")}
                 ),
                 widget.GroupBox(
                     hide_unused = True,
+                    foreground = colors["lightblue"],
+                    font = "Fredoka"
                 ),
 
                 widget.WindowName(
                     foreground = arch_color,
                     padding = 20,
+                    font = "Freokda"
                 ),
 
                 widget.TextBox(

@@ -1,14 +1,8 @@
 from libqtile.lazy import lazy
 from libqtile.config import Key
 from constants import mod, terminal
-import os, subprocess
 
 __all__ = ["shortcuts"]
-
-def save_screenshot(qtile):
-    # os.system("python ~/.config/scripts/screenshot.py")
-    # current not working?
-    pass
 
 shortcuts = [
     Key([mod], "Return", lazy.spawn(terminal), lazy.layout.left(), desc="Launch terminal"),
@@ -37,7 +31,7 @@ shortcuts = [
 
     Key([mod, "shift"], "s", lazy.spawn("maim -s | xclip -selection clipboard -t image/png", shell=True), desc="take screenshot"),
     Key([mod, "shift"], "s", lazy.spawn("maim -s | xclip -selection clipboard -t image/png", shell=True), desc="take screenshot"),
-    Key([mod], "c", lazy.function(save_screenshot), desc="save screenshot to file"),
+    # Key([mod], "c", lazy.function(save_screenshot), desc="save screenshot to file"),
 
     # Key([mod, "control", "shift"], "l",)
 ]
