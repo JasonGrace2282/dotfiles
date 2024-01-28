@@ -146,6 +146,7 @@ screens = [
             margin = window_margin,
             border_width = [5, 5, 5, 0],
             border_color = bar_bg,
+            background = colors["background"]
         ),
     )
 ]
