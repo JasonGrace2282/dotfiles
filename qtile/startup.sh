@@ -4,4 +4,4 @@
 feh --bg-scale ~/.config/background/archbg.png &
 picom -b
 nm-applet &
-greenclip
+systemctl --user enable --now greenclip
