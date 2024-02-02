@@ -26,4 +26,4 @@ alias neofetch='fastfetch'
 alias icat='kitten icat'
 alias d='kitten diff'
 
-
+alias py='python '
