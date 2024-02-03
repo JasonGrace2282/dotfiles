@@ -14,4 +14,5 @@ export DOCUMENTS="~/Documents"
 export DOWNLOADS="~/Downloads"
 export QTILELOG="~/.local/share/qtile/qtile.log"
 
+export DIFFPROG=nvim
 
