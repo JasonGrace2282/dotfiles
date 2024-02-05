@@ -11,7 +11,7 @@ else
     echo "Must install an AUR helper such as paru or yay, or set environment variable AUR_HELPER to another script allowing installation with \$AUR_HELPER -S"
 fi
 
-pkglist="zsh pcmanfm dunst kitty"
+pkglist="zsh pcmanfm dunst kitty zsh-vi-mode-git"
 I3="i3-wm polybar rofi xss-lock i3lock-color feh picom maim python-i3ipc"
 pkglist="${I3} ${pkglist}"
 
@@ -57,7 +57,19 @@ fi
 
 echo "source ~/.config/zsh/.zshrc" >> ~/.zshrc
 
-p10k configure
+# p10k configure
+
+mkdir -p ~/zsh
+
+git clone https://github.com/agkozak/zsh-z.git ~/zsh/zsh-z
+git clone https://github.com/ohmyzsh/ohmyzsh.git ~/ohmyzsh
+mv ~/ohmyzsh/plugins/sudo ~/zsh/sudo
+rm -rf ~/ohmyzsh
+git clone https://github.com/zsh-users/zsh-completions.git ~/zsh/zsh-completions
+git clone https://github.com/zsh-users/zsh-history-substring-search.git ~/zsh/history-substring-search
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/zsh/zsh-autosuggestions
+git clone https://github.com/Tarrasch/zsh-autoenv.git ~/zsh/zsh-autoenv
+git clone https://github.com/darvid/zsh-poetry.git ~/zsh/zsh-poetry
 
 echo "You're almost done! Just install the Fredoka font from google: https://fonts.google.com/specimen/Fredoka"
 echo "Download the font family and then use the command: unzip <installed zip file>; mkdir -p ~/.local/share/fonts; mv Fredoka ~/.local/share/fonts/Fredoka"
