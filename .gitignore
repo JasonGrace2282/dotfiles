@@ -28,4 +28,4 @@ pcmanfm*
 *__pycache__*
 systemd*
 htop/
-
+qutebrowser/[^config.py]*

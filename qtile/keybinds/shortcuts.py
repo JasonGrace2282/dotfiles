@@ -1,6 +1,6 @@
 from libqtile.lazy import lazy
 from libqtile.config import Key
-from constants import mod, terminal
+from constants import mod, terminal, browser
 
 __all__ = ["shortcuts"]
 
@@ -20,7 +20,7 @@ shortcuts = [
     ),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "d", lazy.spawn("rofi -show drun"), desc="Spawn a command using a prompt widget"),
-    Key([mod], "q", lazy.spawn("firefox"), desc="Launch Browser (Firefox)"),
+    Key([mod], "q", lazy.spawn(str(browser)), desc="Launch Browser"),
     Key([mod, "shift"], "d", lazy.spawn("discord"), desc="Launch Discord"),
     Key([mod], "p", lazy.spawn('dunstctl close-all'), desc="Close all notifications"),
 

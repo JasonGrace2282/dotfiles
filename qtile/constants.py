@@ -1,6 +1,6 @@
 mod = "mod4"
 terminal = "kitty"
-
+browser = "qutebrowser"
 wmname = "qtile" # "LG3D"
 
 matches = {
