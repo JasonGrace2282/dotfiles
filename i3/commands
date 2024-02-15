@@ -5,7 +5,7 @@ bindsym $mod+c       exec python $SCRIPTS/screenshot.py
 bindsym $mod+Return exec kitty
 
 # launch firefox
-bindsym $mod+q exec firefox
+bindsym $mod+q exec ~/.local/bin/qutebrowser
 
 # launch discord
 bindsym $mod+Shift+d exec discord

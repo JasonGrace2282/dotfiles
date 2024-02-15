@@ -10,10 +10,7 @@ include $I3_CONFIG/rules
 
 default_border pixel 1
 
-exec --no-startup-id greenclip daemon
-
-exec_always --no-startup-id killall xss-lock
-exec_always --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -i $CONFIG/background/i3lock.png --ring-color=1c60e3 --keyhl-color=9feef5 --noinput-text="empty" --verif-text="verified" --time-str="%I:%M:%S" &> /tmp/i3log.log
+floating_maximum_size 1600x900
 
 # I started using batsignal instead
 # exec --no-startup-id bash "$SCRIPTS/battery.sh" &> /tmp/i3log.log

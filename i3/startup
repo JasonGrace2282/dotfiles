@@ -9,8 +9,8 @@ exec --no-startup-id nm-applet &
 # picom
 exec --no-startup-id picom -b --config ~/.config/picom/picom.conf
 
-# compfy - a better picom?
-# exec --no-startup-id compfy -b
+exec systemctl enable --now batsignal --user
+exec systemctl enable --now greenclip --user
 
 # notifications
 exec_always --no-startup-id killall dunst
@@ -21,3 +21,5 @@ exec --no-startup-id "feh --bg-scale $CONFIG/background/archbg.png"
 
 # tiling layout
 exec --no-startup-id "python $I3_CONFIG/spiral.py"
+
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -i $CONFIG/background/i3lock.png --ring-color=1c60e3 --keyhl-color=9feef5 --noinput-text="empty" --verif-text="verified" --time-str="%I:%M:%S" &> /tmp/i3log.log

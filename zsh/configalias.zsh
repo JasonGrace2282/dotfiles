@@ -7,7 +7,7 @@ alias qconf='\cd ~/.config/qtile; nvim config.py'
 alias dns='bat -pp /etc/resolv.conf'
 alias pwd='print -P %~'
 alias settings='python ~/repos/simple_settings_gui/settings_gui.py'
-alias venv='source .venv/bin/activate; echo "Activated Virtual Environment with $(python --version)!"'
+alias venv='source .venv/bin/activate && echo "Activated Virtual Environment with $(python --version)!"'
 alias ql='cat ${QTILELOG}'
 
 

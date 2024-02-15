@@ -12,7 +12,7 @@ source ~/zsh/zsh-completions/zsh-completions.plugin.zsh
 source ~/zsh/history-substring-search/zsh-history-substring-search.plugin.zsh
 source ~/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/zsh/zsh-autoenv/autoenv.zsh
-source ~/zsh/poetry.zsh
+source ~/zsh/poetry.zsh >> /dev/null
 source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme

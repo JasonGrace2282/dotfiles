@@ -20,6 +20,8 @@ c.url.start_pages = "wiki.archlinux.org"
 ## Remove it to not load settings done via the GUI.
 config.load_autoconfig(False)
 
+config.unbind("<Ctrl-A>")
+c.scrolling.smooth = True
 ## Aliases for commands. The keys of the given dictionary are the
 ## aliases, while the values are the commands they map to.
 ## Type: Dict
@@ -601,7 +603,7 @@ config.load_autoconfig(False)
 ##   - bookmarks
 ##   - history
 ##   - filesystem
-# c.completion.open_categories = ['searchengines', 'quickmarks', 'bookmarks', 'history', 'filesystem']
+c.completion.open_categories = ['searchengines', 'quickmarks', 'bookmarks', 'history', 'filesystem']
 
 ## Move on to the next part when there's only one possible completion
 ## left.
@@ -1487,7 +1489,7 @@ config.load_autoconfig(False)
 ## Automatically enter insert mode if an editable element is focused
 ## after loading the page.
 ## Type: Bool
-# c.input.insert_mode.auto_load = False
+c.input.insert_mode.auto_load = True
 
 ## Leave insert mode when starting a new page load. Patterns may be
 ## unreliable on this setting, and they may match the url you are
@@ -2239,7 +2241,7 @@ config.load_autoconfig(False)
 # config.bind('<Ctrl-T>', 'open -t')
 # config.bind('<Ctrl-Tab>', 'tab-focus last')
 # config.bind('<Ctrl-U>', 'scroll-page 0 -0.5')
-# config.bind('<Ctrl-V>', 'mode-enter passthrough')
+config.unbind('<Ctrl-V>')
 # config.bind('<Ctrl-W>', 'tab-close')
 # config.bind('<Ctrl-X>', 'navigate decrement')
 # config.bind('<Ctrl-^>', 'tab-focus last')
@@ -2482,7 +2484,7 @@ config.bind('L', 'tab-next')
 # config.bind('<Ctrl-Shift-W>', 'rl-filename-rubout', mode='prompt')
 # config.bind('<Ctrl-U>', 'rl-unix-line-discard', mode='prompt')
 # config.bind('<Ctrl-W>', 'rl-rubout " "', mode='prompt')
-# config.bind('<Ctrl-X>', 'prompt-open-download', mode='prompt')
+config.unbind('<Ctrl-X>')
 # config.bind('<Ctrl-Y>', 'rl-yank', mode='prompt')
 # config.bind('<Down>', 'prompt-item-focus next', mode='prompt')
 # config.bind('<Escape>', 'mode-leave', mode='prompt')
