@@ -41,11 +41,6 @@ function spotify ()
   fi
 }
 
-function man ()
-{
-  \man $1 | $EDITOR
-}
-
 function gcampo ()
 {
   git commit -a -m $1;git push
