@@ -31,16 +31,6 @@ function usbmount ()
   fi
 }
 
-function spotify ()
-{
-  if [[ "$(command -v spotify)" != "" ]]
-  then
-    spotify-launcher
-  else
-    spotify
-  fi
-}
-
 function gcampo ()
 {
   git commit -a -m $1;git push
@@ -53,10 +43,10 @@ function gcmpo ()
 
 function gcbm ()
 {
-  if [[ "$(git branch -vv | grep "main" > /dev/null && echo $?)" == "0" ]]
+  if [[ "$(git branch -vv | grep "main" > /dev/null; echo $?)" == "0" ]]
   then
     git checkout main
-  elif [[ "$(git branch -vv | grep "master" > /dev/null && echo $?)" == "0" ]]
+  elif [[ "$(git branch -vv | grep "master" > /dev/null; echo $?)" == "0" ]]
   then
     git checkout master
   else
