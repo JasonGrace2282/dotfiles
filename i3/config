@@ -1,4 +1,5 @@
 # i3 config file (v4)
+# vim:ft=i3config:
 
 set $mod Mod4
 set $HOME /home/jasongrace2282

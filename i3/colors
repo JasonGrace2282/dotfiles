@@ -1,3 +1,4 @@
+# vim:ft=i3config:
 # get color from xressource configuration - variable_name xressource_color fallback
 
 # special

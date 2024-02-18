@@ -1,3 +1,4 @@
+# vim:ft=i3config:
 # Inner gaps for all windows: space between two adjacent windows (or split containers).
 # gaps inner <gap_size>[px]
 

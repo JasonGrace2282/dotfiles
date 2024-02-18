@@ -1,3 +1,4 @@
+# vim:ft=i3config:
 # exit i3 
 bindsym $mod+BackSpace exec --no-startup-id dunstify "Quitting session..." && sleep 1s && i3-msg exit
 

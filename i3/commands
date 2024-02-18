@@ -1,3 +1,4 @@
+# vim:ft=i3config:
 bindsym $mod+Shift+s exec --no-startup-id bash $SCRIPTS/screenshot.sh
 bindsym $mod+Shift+v exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 bindsym $mod+c       exec python $SCRIPTS/screenshot.py

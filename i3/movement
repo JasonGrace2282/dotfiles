@@ -1,3 +1,4 @@
+# vim:ft=i3config:
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
