@@ -28,3 +28,5 @@ alias d='kitten diff'
 
 alias py='python '
 alias mx='tmux'
+alias mxa='tmux attach'
+alias mxat='tmux attach -t'
