@@ -27,3 +27,4 @@ alias icat='kitten icat'
 alias d='kitten diff'
 
 alias py='python '
+alias mx='tmux'
