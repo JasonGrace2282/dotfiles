@@ -21,12 +21,10 @@ Execute the following commands to backup your current configuration and install 
 mv ~/.config ~/.config.backup
 git clone https://github.com/JasonGrace2282/dotfiles.git ~/.config
 ```
-You will then need to manually change the `set $HOME /home/jasongrace2282` to `set $HOME /home/<your username>`. If you are unsure of your username, try
+When using i3, you will then need to manually change the `set $HOME /home/jasongrace2282` to `set $HOME /home/<your username>`. If you are unsure of your username, try
  running `whoami` in a terminal.
 
-If you are on archlinux, there is a handy script to install most dependencies for you, just run
+To use the neovim configuration you must also run this command:
 ```bash
-bash ~/.config/setup.sh
+touch ~/.config/nvim/lua/config/projects.lua && echo "return {}" > ~/.config/nvim/lua/config/projects.lua
 ```
-
-To get an (almost) fully functioning system, accept the defaults for each option.
