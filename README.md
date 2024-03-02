@@ -16,7 +16,6 @@ This is a git backup of most of my files in `~/.config`. Among them you can find
 * kitty
 * picom
 * rofi
-* [simple-settings-gui](https://github.com/JasonGrace2282/simple_settings_gui) config
 * PCmanFM config
 * Some gtk configs
 
