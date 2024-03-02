@@ -1,5 +1,10 @@
 # JasonGrace2282's Dotfiles
-![Screenshot of my setup](https://github.com/JasonGrace2282/dotfiles/assets/110117391/a97016ac-0f66-4571-a282-648f85bf26a7)
+### i3
+![Screenshot of my i3 setup](https://github.com/JasonGrace2282/dotfiles/assets/110117391/a97016ac-0f66-4571-a282-648f85bf26a7)
+
+### Hyprland
+![Screenshot of my Hyprland Setup](https://github.com/JasonGrace2282/dotfiles/assets/110117391/e03b15b5-685a-44dd-a9b1-191b76802b5d)
+
 
 
 This is a git backup of most of my files in `~/.config`. Among them you can find:
