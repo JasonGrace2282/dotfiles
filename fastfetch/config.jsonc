@@ -19,5 +19,14 @@
     "disk",
     "break",
     "colors"
-  ]
+  ],
+  "display": {
+    "color": "8"
+  },
+  "logo": {
+    "source": "~/.config/fastfetch/logo.txt",
+    "color": {
+      "1": "8"
+    }
+  }
 }
