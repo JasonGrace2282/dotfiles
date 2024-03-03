@@ -11,7 +11,6 @@ alias ff="firefox"
 alias cd='z'
 alias l='deactivate'
 alias :q='exit'
-alias copy='xclip -sel clip'
 alias pkglist='bat /etc/pkglist.txt' # from hook
 alias pkgcount='wc -l /etc/pkglist.txt'
 alias printer='system-config-printer &> /tmp/printer.log'

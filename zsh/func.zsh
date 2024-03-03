@@ -53,3 +53,12 @@ function gcbm ()
     echo "Could not find main branch"
   fi
 }
+
+function copy()
+{
+  if [[ "${XDG_SESSION_TYPE}" == "wayland" ]]; then
+    wl-copy
+  else
+    xclip -sel clip
+  fi
+}
