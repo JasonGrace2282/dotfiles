@@ -10,7 +10,7 @@ export SCREENSHOTS="~/Pictures/Screenshots"
 export DIFFPROG=nvim
 
 if [[ "${XDG_SESSION_TYPE}" == "wayland" ]]; then
-  export MOZ_ENABLE_WAYLAND=1
+  source $ZSHCONFIG/wayland.zsh
 else
   export MOZ_ENABLE_WAYLAND=0
 fi
