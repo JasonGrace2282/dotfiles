@@ -51,3 +51,8 @@ function copy()
     xclip -sel clip
   fi
 }
+
+function deitb ()
+{
+  docker exec -it $@ /bin/bash
+}
