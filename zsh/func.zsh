@@ -22,12 +22,12 @@ function usbmount ()
 
 function gcampo ()
 {
-  git commit -a -m $1;git push
+  git commit -a -m $1 && shift && git push $@
 }
 
 function gcmpo ()
 {
-  git commit -m $1; git push
+  git commit -m $1 && shift && git push $@
 }
 
 function gcbm ()
