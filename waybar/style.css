@@ -33,7 +33,7 @@ window#waybar {
 
 #workspaces button {
 	padding: 0 2px;
-	color: #fdf6e3;
+	color: #96a0aa;
 }
 #workspaces button.focused {
 	color: #268bd2;
@@ -48,7 +48,7 @@ window#waybar {
 	padding: 0 3px;
 }
 #workspaces button.active {
-    color: #96a0aa;
+    color: #fdf6e3;
 }
 
 #pulseaudio {

@@ -32,3 +32,4 @@ qutebrowser/[^config.py]*
 tmux/plugins/
 VirtualBox
 tlpui/
+Kitware
