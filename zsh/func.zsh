@@ -43,6 +43,20 @@ function gcbm ()
   fi
 }
 
+function grrhh ()
+{
+  BACK=$1
+  shift
+  git reset --hard "HEAD~${BACK}" $@
+}
+
+function grrsh ()
+{
+  BACK=$1
+  shift
+  git reset --soft "HEAD~${BACK}" $@
+}
+
 function copy()
 {
   if [[ "${XDG_SESSION_TYPE}" == "wayland" ]]; then
