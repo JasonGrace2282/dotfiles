@@ -70,3 +70,8 @@ function deitb ()
 {
   docker exec -it $@ /bin/bash
 }
+
+function gpum ()
+{
+  git pull upstream main || git pull upstream master
+}
