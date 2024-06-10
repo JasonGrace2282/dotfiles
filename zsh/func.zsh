@@ -75,3 +75,12 @@ function gpum ()
 {
   git pull upstream main || git pull upstream master
 }
+
+function gppum ()
+{
+  if ! git pull upstream main; then
+    if ! git pull upstream master; then
+      echo "Could not pull from upstream"
+    fi
+  fi
+}
