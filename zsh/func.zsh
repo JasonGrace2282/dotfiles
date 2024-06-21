@@ -1,11 +1,11 @@
-function battery () # in case have to check from terminal
+battery () # in case have to check from terminal
 {
   echo "Battery: "
   echo "$(cat /sys/class/power_supply/BAT0/capacity)%"
   echo "$(cat /sys/class/power_supply/BAT0/status)"
 }
 
-function usbmount ()
+usbmount ()
 {
   if [ -z "$1" ]
   then
@@ -20,17 +20,17 @@ function usbmount ()
   fi
 }
 
-function gcampo ()
+gcampo ()
 {
   git commit -a -m $1 && shift && git push $@
 }
 
-function gcmpo ()
+gcmpo ()
 {
   git commit -m $1 && shift && git push $@
 }
 
-function gcbm ()
+gcbm ()
 {
   if [[ "$(git branch -vv | grep "main" > /dev/null; echo $?)" == "0" ]]
   then
@@ -43,21 +43,21 @@ function gcbm ()
   fi
 }
 
-function grrhh ()
+grrhh ()
 {
   BACK=$1
   shift
   git reset --hard "HEAD~${BACK}" $@
 }
 
-function grrsh ()
+grrsh ()
 {
   BACK=$1
   shift
   git reset --soft "HEAD~${BACK}" $@
 }
 
-function copy()
+copy()
 {
   if [[ "${XDG_SESSION_TYPE}" == "wayland" ]]; then
     wl-copy
@@ -66,21 +66,29 @@ function copy()
   fi
 }
 
-function deitb ()
+deitb ()
 {
   docker exec -it $@ /bin/bash
 }
 
-function gpum ()
+gpum ()
 {
   git pull upstream main || git pull upstream master
 }
 
-function gppum ()
+gppum ()
 {
   if ! git pull upstream main; then
     if ! git pull upstream master; then
       echo "Could not pull from upstream"
     fi
+  fi
+}
+
+zfzf ()
+{
+  FILE="$(fzf)"
+  if [[ $FILE ]]; then
+    zathura "${FILE}" --fork
   fi
 }

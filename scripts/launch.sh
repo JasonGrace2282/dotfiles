@@ -11,7 +11,7 @@ bars=(
 )
 for x in "${bars[@]}"
 do
-  polybar ${x} 2>&1 | tee -a /tmp/polybar.log & disown
+  polybar "${x}" 2>&1 | tee -a /tmp/polybar.log & disown
 done
 
 echo "Polybar launched..."
