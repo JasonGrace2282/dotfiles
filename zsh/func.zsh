@@ -22,12 +22,12 @@ usbmount ()
 
 gcampo ()
 {
-  git commit -a -m $1 && shift && git push $@
+  git commit -a -m $@ && git push
 }
 
 gcmpo ()
 {
-  git commit -m $1 && shift && git push $@
+  git commit -m $@ && git push
 }
 
 gcbm ()
@@ -41,20 +41,6 @@ gcbm ()
   else
     echo "Could not find main branch"
   fi
-}
-
-grrhh ()
-{
-  BACK=$1
-  shift
-  git reset --hard "HEAD~${BACK}" $@
-}
-
-grrsh ()
-{
-  BACK=$1
-  shift
-  git reset --soft "HEAD~${BACK}" $@
 }
 
 copy()
