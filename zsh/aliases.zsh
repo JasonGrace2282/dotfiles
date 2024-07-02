@@ -30,3 +30,8 @@ alias tmx='tmux'
 alias tmxa='tmux attach'
 alias tmxat='tmux attach -t'
 alias tmxls='tmux ls'
+
+# other stuff
+alias pmpy='python3 manage.py '
+alias pypyrs='python3 manage.py runserver'
+alias pmpyt='python3 manage.py test'
