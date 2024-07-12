@@ -59,7 +59,7 @@ deitb ()
 
 gpum ()
 {
-  git pull upstream main || git pull upstream master
+  git pull upstream main $@ || git pull upstream master $@
 }
 
 gppum ()
