@@ -1,13 +1,11 @@
 plugins=(
   z
-  sudo
   zsh-syntax-highlighting
   zsh-completions
   zsh-autosuggestions
 )
 
 source ~/zsh/zsh-z/zsh-z.plugin.zsh
-source ~/zsh/sudo/sudo.zsh
 source ~/zsh/zsh-completions/zsh-completions.plugin.zsh
 source ~/zsh/history-substring-search/zsh-history-substring-search.plugin.zsh
 source ~/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
