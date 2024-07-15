@@ -50,6 +50,7 @@ glow
 gnome-themes-extra
 go
 gparted
+grimblast
 grub
 grub-customizer
 gtk-engine-murrine
@@ -57,7 +58,6 @@ htop-vim
 hyprland
 hyprpaper
 hyprpicker
-hyprshot
 i3-wm
 i3lock-color
 i3status
