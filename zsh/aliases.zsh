@@ -15,7 +15,7 @@ alias pkgcount='wc -l /etc/pkglist.txt'
 alias printer='system-config-printer &> /tmp/printer.log'
 alias deit='docker exec -it'
 
-alias sudo='run0 ' # evaluate aliases after sudo
+alias sudo='sudo ' # evaluate aliases after sudo
 
 alias neofetch='fastfetch'
 
