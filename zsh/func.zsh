@@ -57,6 +57,11 @@ deitb ()
   docker exec -it $@ /bin/bash
 }
 
+gcb ()
+{
+  git checkout $(git branch --format "%(refname:lstrip=2)" | fzf)
+}
+
 gpum ()
 {
   git pull upstream main $@ || git pull upstream master $@
