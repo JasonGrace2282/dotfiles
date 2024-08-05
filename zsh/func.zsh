@@ -57,9 +57,9 @@ deitb ()
   docker exec -it $@ /bin/bash
 }
 
-gcb ()
+gcbs ()
 {
-  git checkout $(git branch --format "%(refname:lstrip=2)" | fzf)
+  git checkout "$(git branch --format "%(refname:lstrip=2)" | fzf)"
 }
 
 gpum ()
