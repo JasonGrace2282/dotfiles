@@ -26,7 +26,6 @@ alias d='kitten diff'
 alias py='python '
 
 # tmux
-alias tmx='tmux'
 alias tmxa='tmux attach'
 alias tmxat='tmux attach -t'
 alias tmxls='tmux ls'
