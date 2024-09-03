@@ -32,15 +32,7 @@ gcmpo ()
 
 gcbm ()
 {
-  if [[ "$(git branch -vv | grep "main" > /dev/null; echo $?)" == "0" ]]
-  then
-    git checkout main
-  elif [[ "$(git branch -vv | grep "master" > /dev/null; echo $?)" == "0" ]]
-  then
-    git checkout master
-  else
-    echo "Could not find main branch"
-  fi
+  git checkout main || git checkout master || echo "Could not find main branch"
 }
 
 copy()
