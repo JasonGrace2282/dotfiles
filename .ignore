@@ -1,0 +1,5 @@
+# vim:set ft=gitignore:
+# Use to activate:
+# ln -s ~/.config/.ignore .ignore
+go/
+**/*.min.js

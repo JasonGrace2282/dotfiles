@@ -34,3 +34,6 @@ alias tmxls='tmux ls'
 alias pmpy='python3 manage.py '
 alias pypyrs='python3 manage.py runserver'
 alias pmpyt='python3 manage.py test'
+
+# clear fzf default command
+alias fzfcl='FZF_DEFAULT_COMMAND="" fzf'
