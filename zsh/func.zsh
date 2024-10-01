@@ -32,7 +32,7 @@ gcmpo ()
 
 gcbm ()
 {
-  git checkout main || git checkout master || echo "Could not find main branch"
+  git checkout main &> /dev/null || git checkout master &> /dev/null || echo "Could not find main branch"
 }
 
 copy()

@@ -1,5 +1,4 @@
 export KITTY_SHELL_INTEGRATION="enabled"
-export PATH="$HOME/.ghcup/bin:$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
 export AUTOENV_FILE_LEAVE=".autoenv.zsh"
 export BAT_THEME="TwoDark"
 export CHROOT="$HOME/chroot"
@@ -17,3 +16,5 @@ fi
 
 
 export FZF_DEFAULT_COMMAND="fd . $HOME"
+
+export PATH="$HOME/.cargo/bin:$HOME/.ghcup/bin:$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
