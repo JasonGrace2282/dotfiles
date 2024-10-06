@@ -40,3 +40,6 @@ github-copilot
 gatsby
 blender/
 chromium/
+gtk-3.0/
+
+zsh/private.zsh

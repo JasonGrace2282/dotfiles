@@ -38,8 +38,5 @@ alias pmpyt='python3 manage.py test'
 # clear fzf default command
 alias fzfcl='FZF_DEFAULT_COMMAND="" fzf'
 
-if [ "$TERM" = "xterm-kitty" ]; then
-  alias ssh='kitten ssh'
-fi
-
-alias vpnon='nmcli connection up 2027adeshpan'
+privatec="$HOME/.config/zsh/private.zsh"
+[ -f $privatec ] && source $privatec
