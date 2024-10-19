@@ -12,6 +12,7 @@ alias gll='git log'
 alias gcl='git clone'
 alias gcb='git checkout'
 alias gd='git diff'
+alias gd.='git diff .'  # typos happen :(
 alias gb='git branch -vv'
 alias gri='git rebase -i'
 alias gpfl='git push --force-with-lease'

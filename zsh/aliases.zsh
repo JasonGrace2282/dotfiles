@@ -30,10 +30,19 @@ alias tmxa='tmux attach'
 alias tmxat='tmux attach -t'
 alias tmxls='tmux ls'
 
+# docker
+alias dcu='docker compose up'
+alias dcud='docker compose up -d'
+alias dcb='docker compose build'
+alias dcd='docker compose down'
+alias dcdv='docker compose down -v'
+
 # other stuff
 alias pmpy='python3 manage.py '
 alias pypyrs='python3 manage.py runserver'
 alias pmpyt='python3 manage.py test'
+
+alias cbh='echo $PWD/build/html/index.html | copy'
 
 # clear fzf default command
 alias fzfcl='FZF_DEFAULT_COMMAND="" fzf'

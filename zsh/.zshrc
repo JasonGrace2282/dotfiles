@@ -29,3 +29,5 @@ source $ZSHCONFIG/git.zsh
 
 source $ZSHCONFIG/plugins.zsh
 unset ZSHCONFIG
+
+fpath+="$HOME/.zsh-completions"
