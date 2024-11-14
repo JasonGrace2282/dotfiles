@@ -17,4 +17,4 @@ fi
 
 export FZF_DEFAULT_COMMAND="fd . $HOME"
 
-export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.ghcup/bin:$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$HOME/.ghcup/bin:$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"

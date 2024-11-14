@@ -44,9 +44,20 @@ copy()
   fi
 }
 
+_deit () {
+  cmd="$1"
+  shift
+  docker exec -it $@ $cmd
+}
+
 deitb ()
 {
-  docker exec -it $@ /bin/bash
+  _deit /bin/bash $@
+}
+
+deitsh ()
+{
+  _deit /bin/sh $@
 }
 
 gcbs ()
@@ -59,19 +70,16 @@ gpum ()
   git pull upstream main $@ || git pull upstream master $@
 }
 
-gppum ()
-{
-  if ! git pull upstream main; then
-    if ! git pull upstream master; then
-      echo "Could not pull from upstream"
-    fi
-  fi
-}
-
 zfzf ()
 {
   FILE="$(fzf)"
   if [[ $FILE ]]; then
     zathura "${FILE}" --fork
+    exit
   fi
+}
+
+afk () {
+  [ -e "$HOME/.config/.venv" ] && source "$HOME/.config/.venv/bin/activate"
+  "$HOME/.config/scripts/afk.py" $@
 }

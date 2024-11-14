@@ -47,5 +47,13 @@ alias cbh='echo $PWD/build/html/index.html | copy'
 # clear fzf default command
 alias fzfcl='FZF_DEFAULT_COMMAND="" fzf'
 
+# uv
+alias uvti='uv tool install'
+alias uvr='uv run'
+for i in {8..13}; do
+    alias "uvr$i"="uv run -p3.$i"
+done
+alias uvnp='uv run --no-project'
+
 privatec="$HOME/.config/zsh/private.zsh"
 [ -f $privatec ] && source $privatec
