@@ -74,8 +74,7 @@ zfzf ()
 {
   FILE="$(fzf)"
   if [[ $FILE ]]; then
-    zathura "${FILE}" --fork
-    exit
+    zathura --fork "${FILE}"
   fi
 }
 
