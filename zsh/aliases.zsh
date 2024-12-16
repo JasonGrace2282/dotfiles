@@ -4,6 +4,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias grepi='grep -i --color=auto'
 alias nmcli='nmcli --color yes -p'
+alias ip='ip --color=auto'
 alias cat='bat -pp'
 
 # lazyness of typing
