@@ -45,3 +45,5 @@ gtk-3.0/
 zsh/private.zsh
 go
 .venv
+autostart/
+keybase/
