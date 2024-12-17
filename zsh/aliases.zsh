@@ -1,6 +1,6 @@
 # color stuff
-alias ll='ls -a --color=auto'
-alias ls='ls --color=auto'
+alias ll='lsd -a'
+alias ls='lsd'
 alias grep='grep --color=auto'
 alias grepi='grep -i --color=auto'
 alias nmcli='nmcli --color yes -p'
