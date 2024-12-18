@@ -37,6 +37,12 @@ alias dcud='docker compose up -d'
 alias dcb='docker compose build'
 alias dcd='docker compose down'
 alias dcdv='docker compose down -v'
+alias ds='docker service'
+alias dsls='docker service ls'
+alias dsi='docker service inspect'
+alias dsip='docker service inspect --pretty'
+alias dsrm='docker service rm'
+alias dsps='docker service ps'
 
 # other stuff
 alias pmpy='python3 manage.py '
