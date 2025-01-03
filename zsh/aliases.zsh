@@ -43,6 +43,7 @@ alias dsi='docker service inspect'
 alias dsip='docker service inspect --pretty'
 alias dsrm='docker service rm'
 alias dsps='docker service ps'
+alias dsl='docker service logs'
 
 # other stuff
 alias pmpy='python3 manage.py '
