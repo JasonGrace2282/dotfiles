@@ -72,8 +72,8 @@ gpum ()
 
 zfzf ()
 {
-  FILE="$(fzf)"
-  if [[ $FILE ]]; then
+  FILE="$(ag -g .pdf$ | fzf)"
+  if [ -n "$FILE" ]; then
     zathura --fork "${FILE}"
   fi
 }
