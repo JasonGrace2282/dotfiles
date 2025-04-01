@@ -5,7 +5,7 @@ alias grep='grep --color=auto'
 alias grepi='grep -i --color=auto'
 alias nmcli='nmcli --color yes -p'
 alias ip='ip --color=auto'
-alias cat='bat -pp'
+alias cat='bat'
 
 # lazyness of typing
 alias ff="firefox"
