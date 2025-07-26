@@ -83,6 +83,10 @@ afk () {
   "$HOME/.config/scripts/afk.py" $@
 }
 
+raw-passcard() {
+    gpg -d ~/repos/sysadmin/keybase-passcard/passwords/"$1".txt.gpg 2>/dev/null
+}
+
 # Run a tjCSL ansible playbook intelligently (using ssh passcards, vault password files, etc.)
 tjans() {
     ANSIBLE_DIR="/home/jasongrace2282/repos/sysadmin/ansible"
