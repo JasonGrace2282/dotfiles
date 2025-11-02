@@ -159,6 +159,7 @@ tjans() {
 
     set -- "${other_args[@]}"
 
+    pp "$SSH_PASS_NAME" || true
     export SSHPASS=$(raw-passcard "$SSH_PASS_NAME")
     echo "$SSHPASS"
 
@@ -171,3 +172,5 @@ tjans() {
     git -C "$ANSIBLE_DIR" pull
     ansible-playbook "$ANSIBLE_DIR"/"$PLAY".yml -i "$ANSIBLE_DIR"/hosts --ask-pass --vault-password-file "$TEMP_FILE" -f "$NUM_FORKS" -u "$CONNECT_USER" "$@"
 }
+
+source $ZSHCONFIG/tjcsl.zsh
