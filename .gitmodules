@@ -3,3 +3,6 @@
 	url = https://github.com/JasonGrace2282/nvim.git
 [nvim]
 	main = main
+[submodule "zsh/tjcsl"]
+	path = zsh/tjcsl
+	url = https://github.com/tjcsl/sysadmin-aliases.git

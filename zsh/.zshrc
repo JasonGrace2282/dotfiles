@@ -26,8 +26,12 @@ source $ZSHCONFIG/aliases.zsh
 # git stuff
 source $ZSHCONFIG/git.zsh
 
-
 source $ZSHCONFIG/plugins.zsh
+
+export KEYBASE_PASSCARD_DIR="$HOME/repos/sysadmin/keybase-passcard"
+export CSL_ANSIBLE_DIR="$HOME/repos/sysadmin/ansible"
+source "$ZSHCONFIG/tjcsl/main.sh"
+
 unset ZSHCONFIG
 
 fpath+="$HOME/.zsh-completions"
