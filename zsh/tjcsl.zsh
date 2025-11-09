@@ -8,10 +8,14 @@ j() {
   if [[ "$base" == "borg"* || "$base" == "hpc"* ]]; then
     pp cluster
   else
-    pp "$1"
+    pp "$base"
   fi
   if [[ "$1" != *".tjhsst.edu" ]]; then
-    set -- "$1.csl.tjhsst.edu"
+    if [[ "$base" =~ "^(www|ipa)" ]]; then
+      set -- "$1.tjhsst.edu"
+    else
+      set -- "$1.csl.tjhsst.edu"
+    fi
   fi
   ssh "root@$1"
 }
