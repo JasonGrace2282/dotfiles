@@ -17,5 +17,7 @@ j() {
       set -- "$1.csl.tjhsst.edu"
     fi
   fi
-  ssh "root@$1"
+  url="$1"
+  shift
+  ssh "root@$url" $@
 }
