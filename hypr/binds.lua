@@ -1,0 +1,22 @@
+hl.bind(MOD .. " + E", hl.dsp.exec_cmd(FILE_MANAGER))
+hl.bind(MOD .. " + D", hl.dsp.exec_cmd(MENU_COMMAND))
+hl.bind(MOD .. " + Q", hl.dsp.exec_cmd(BROWSER))
+hl.bind(MOD .. " + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu | cliphist decode | wl-copy"))
+hl.bind(MOD .. " + O", hl.dsp.exec_cmd("hyprpicker -a && dunstify \"$(wl-paste)\""))
+hl.bind(MOD .. " + S", hl.dsp.exec_cmd("grimblast copy screen --notify"))
+hl.bind(MOD .. " + P", hl.dsp.exec_cmd("dunstctl close"))
+
+hl.bind(MOD .. " + backspace", hl.dsp.exit())
+hl.bind(MOD .. " + SHIFT + C", hl.dsp.window.close())
+hl.bind(MOD .. " + SHIFT + D", hl.dsp.exec_cmd("discord --ozone-platform-hint=auto --enable-gpu"))
+hl.bind(MOD .. " + SHIFT + S", hl.dsp.exec_cmd("grimblast copy area --notify"))
+hl.bind(MOD .. " + SHIFT + Q", hl.dsp.exec_cmd("swaylock"))
+hl.bind(MOD .. " + Return", hl.dsp.exec_cmd(TERMINAL))
+
+-- keys
+hl.bind("XF86PowerOff", hl.dsp.exec_cmd("shutdown now"))
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"))
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"))
+hl.bind("XF86AudioMute", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"))
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl set +10%"))
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl set 10%-"))
