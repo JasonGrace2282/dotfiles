@@ -103,7 +103,7 @@
 			"warning": 30,
 			"critical": 15
 		},
-		"format": "{icon} {capacity}%",
+		"format": "<span size='120%'>{icon}</span> {capacity}%",
 		"format-icons": [
 			"",
 			"",
