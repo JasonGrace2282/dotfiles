@@ -51,6 +51,7 @@ alias pypyrs='python3 manage.py runserver'
 alias pmpyt='python3 manage.py test'
 
 alias cbh='echo $PWD/build/html/index.html | copy'
+alias warp='warp-cli '
 
 # clear fzf default command
 alias fzfcl='FZF_DEFAULT_COMMAND="" fzf'
